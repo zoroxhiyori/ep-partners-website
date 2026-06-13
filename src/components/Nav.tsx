@@ -24,9 +24,12 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
 
         {/* Logo */}
-        <Link href="/" className="flex items-baseline gap-0.5 shrink-0">
-          <span className="font-serif text-2xl font-semibold tracking-wide text-gold">EP</span>
-          <span className="font-serif text-2xl font-semibold tracking-wide text-navy"> Partners</span>
+        <Link href="/" className="shrink-0">
+          <img
+            src="/images/EP_partner_logo.png"
+            alt="EP Partners"
+            className="h-11 w-auto"
+          />
         </Link>
 
         {/* Desktop nav links */}

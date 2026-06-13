@@ -320,9 +320,11 @@ export default function ContactPage() {
       {/* ── FOOTER ── */}
       <footer className="bg-navy py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-serif text-lg tracking-wide text-white/80">
-            <span className="text-gold">EP</span> Partners
-          </span>
+          <img
+            src="/images/EP_partner_logo.png"
+            alt="EP Partners"
+            className="h-9 w-auto mix-blend-multiply"
+          />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a
               href="mailto:info@eppartnerskh.com"
