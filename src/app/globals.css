@@ -56,3 +56,8 @@ select option {
   color: #ffffff;
   background: #162444;
 }
+
+/* Nav link hover — inline styles can't do :hover */
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
