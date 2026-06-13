@@ -92,7 +92,7 @@ export default function ContactPage() {
   };
 
   const inputClass =
-    "w-full bg-transparent border border-navy/20 font-sans text-[14px] text-navy placeholder:text-navy/30 px-5 py-4 focus:outline-none focus:border-gold transition-colors duration-200";
+    "w-full bg-transparent border border-white/20 font-sans text-[14px] text-white placeholder:text-white/30 px-5 py-4 focus:outline-none focus:border-gold transition-colors duration-200";
 
   return (
     <main className="flex flex-col">
@@ -121,7 +121,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── 2. CONTACT GRID ── */}
-      <section className="bg-white py-28 lg:py-36 border-b border-navy/8">
+      <section className="bg-navy py-28 lg:py-36 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-[380px_1fr] gap-16 lg:gap-24 items-start">
 
@@ -131,12 +131,12 @@ export default function ContactPage() {
                 <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                   Contact Channels
                 </p>
-                <h2 className="font-serif text-3xl lg:text-4xl font-light text-navy leading-[1.2]">
+                <h2 className="font-serif text-3xl lg:text-4xl font-light text-white leading-[1.2]">
                   Reach Us Your<br />Way.
                 </h2>
               </div>
 
-              <div className="flex flex-col divide-y divide-navy/8">
+              <div className="flex flex-col divide-y divide-white/10">
                 {channels.map(({ platform, handle, href, detail }) => (
                   <a
                     key={platform}
@@ -146,15 +146,15 @@ export default function ContactPage() {
                     className="py-6 flex flex-col gap-1.5 group"
                   >
                     <div className="flex items-center justify-between gap-4">
-                      <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-navy/35 group-hover:text-gold transition-colors duration-200">
+                      <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-white/35 group-hover:text-gold transition-colors duration-200">
                         {platform}
                       </span>
-                      <span className="w-4 h-px bg-navy/15 group-hover:w-8 group-hover:bg-gold transition-all duration-300" />
+                      <span className="w-4 h-px bg-white/15 group-hover:w-8 group-hover:bg-gold transition-all duration-300" />
                     </div>
-                    <p className="font-serif text-[1.05rem] font-medium text-navy group-hover:text-gold transition-colors duration-200">
+                    <p className="font-serif text-[1.05rem] font-medium text-white group-hover:text-gold transition-colors duration-200">
                       {handle}
                     </p>
-                    <p className="font-sans text-[12px] text-navy/35">
+                    <p className="font-sans text-[12px] text-white/35">
                       {detail}
                     </p>
                   </a>
@@ -168,17 +168,17 @@ export default function ContactPage() {
                 <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                   Send a Message
                 </p>
-                <h2 className="font-serif text-3xl lg:text-4xl font-light text-navy leading-[1.2]">
+                <h2 className="font-serif text-3xl lg:text-4xl font-light text-white leading-[1.2]">
                   Tell Us About<br />Your Needs.
                 </h2>
               </div>
 
               {submitted ? (
                 <div className="border border-gold/30 bg-gold/5 px-8 py-10 flex flex-col gap-3">
-                  <p className="font-serif text-2xl font-light text-navy">
+                  <p className="font-serif text-2xl font-light text-white">
                     Thank you for reaching out.
                   </p>
-                  <p className="font-sans text-[14px] leading-[1.8] text-navy/55">
+                  <p className="font-sans text-[14px] leading-[1.8] text-white/60">
                     We've received your message and will respond within one
                     business day. For urgent matters, please reach out via
                     Telegram or WhatsApp.
@@ -235,13 +235,13 @@ export default function ContactPage() {
                   />
 
                   <div className="flex items-center justify-between gap-6 pt-2">
-                    <p className="font-sans text-[11px] text-navy/30 leading-[1.7]">
+                    <p className="font-sans text-[11px] text-white/30 leading-[1.7]">
                       We respond within one business day.<br />
                       Your information is kept strictly confidential.
                     </p>
                     <button
                       type="submit"
-                      className="shrink-0 bg-navy text-white font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-gold transition-colors duration-300"
+                      className="shrink-0 bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-[#d4a843] transition-colors duration-300"
                     >
                       Send Message
                     </button>
@@ -254,7 +254,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── 3. FAQ ── */}
-      <section className="bg-[#f7f5f1] py-28 lg:py-36">
+      <section className="bg-[#0a1628] py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
@@ -262,16 +262,16 @@ export default function ContactPage() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                 Common Questions
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
                 Frequently Asked<br />Questions.
               </h2>
             </div>
-            <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-xs lg:text-right">
+            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-xs lg:text-right">
               Don't see your question? Reach out directly — we're happy to help.
             </p>
           </div>
 
-          <div className="flex flex-col divide-y divide-navy/10">
+          <div className="flex flex-col divide-y divide-white/10">
             {faqs.map(({ question, answer }, index) => {
               const isOpen = activeFaq === index;
               return (
@@ -282,7 +282,7 @@ export default function ContactPage() {
                   >
                     <h3
                       className={`font-serif text-xl lg:text-[1.35rem] font-medium leading-snug transition-colors duration-200 ${
-                        isOpen ? "text-gold" : "text-navy group-hover:text-gold"
+                        isOpen ? "text-gold" : "text-white group-hover:text-gold"
                       }`}
                     >
                       {question}
@@ -290,8 +290,8 @@ export default function ContactPage() {
                     <span
                       className={`shrink-0 w-8 h-8 border flex items-center justify-center transition-all duration-300 ${
                         isOpen
-                          ? "border-gold bg-gold text-white rotate-45"
-                          : "border-navy/20 text-navy/40 group-hover:border-gold group-hover:text-gold"
+                          ? "border-gold bg-gold text-navy rotate-45"
+                          : "border-white/20 text-white/40 group-hover:border-gold group-hover:text-gold"
                       }`}
                     >
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -306,7 +306,7 @@ export default function ContactPage() {
                       isOpen ? "max-h-64 opacity-100 pb-7" : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="font-sans text-[15px] leading-[1.9] text-navy/55 max-w-3xl">
+                    <p className="font-sans text-[15px] leading-[1.9] text-white/60 max-w-3xl">
                       {answer}
                     </p>
                   </div>
@@ -318,12 +318,12 @@ export default function ContactPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-navy py-10 border-t border-white/5">
+      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto mix-blend-multiply"
+            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

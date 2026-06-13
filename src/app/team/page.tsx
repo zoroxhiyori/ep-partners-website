@@ -80,14 +80,14 @@ export default function TeamPage() {
       </section>
 
       {/* ── 2. TEAM GRID ── */}
-      <section className="bg-white py-28 lg:py-36">
+      <section className="bg-navy py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20">
             <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
               Meet the Team
             </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+            <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
               Expertise Across<br />Every Discipline.
             </h2>
           </div>
@@ -97,15 +97,15 @@ export default function TeamPage() {
               <div key={name + role} className="flex flex-col gap-6 group">
 
                 {/* Photo placeholder */}
-                <div className="relative aspect-[3/4] bg-navy/[0.06] overflow-hidden">
+                <div className="relative aspect-[3/4] bg-[#162444] overflow-hidden">
                   <span className="absolute top-4 right-4 w-8 h-px bg-gold/40 group-hover:w-12 transition-all duration-300" />
                   <span className="absolute top-4 right-4 h-8 w-px bg-gold/40 group-hover:h-12 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-end p-5">
-                    <span className="font-serif text-6xl font-bold text-navy/[0.06] leading-none select-none">
+                    <span className="font-serif text-6xl font-bold text-white/[0.06] leading-none select-none">
                       {initials}
                     </span>
                   </div>
-                  <p className="absolute bottom-4 right-5 font-sans text-[9px] tracking-[0.2em] uppercase text-navy/25">
+                  <p className="absolute bottom-4 right-5 font-sans text-[9px] tracking-[0.2em] uppercase text-white/25">
                     Photo
                   </p>
                 </div>
@@ -113,15 +113,15 @@ export default function TeamPage() {
                 {/* Info */}
                 <div className="flex flex-col gap-3">
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-serif text-xl font-medium text-navy group-hover:text-gold transition-colors duration-300">
+                    <h3 className="font-serif text-xl font-medium text-white group-hover:text-gold transition-colors duration-300">
                       {name}
                     </h3>
-                    <p className="font-sans text-[11px] tracking-[0.14em] uppercase text-navy/45">
+                    <p className="font-sans text-[11px] tracking-[0.14em] uppercase text-white/50">
                       {role}
                     </p>
                   </div>
 
-                  <p className="font-sans text-[13px] leading-[1.8] text-navy/55">
+                  <p className="font-sans text-[13px] leading-[1.8] text-white/60">
                     {bio}
                   </p>
 
@@ -133,7 +133,7 @@ export default function TeamPage() {
                           {lang}
                         </span>
                         {i < languages.length - 1 && (
-                          <span className="text-navy/20 text-[10px] select-none">·</span>
+                          <span className="text-white/20 text-[10px] select-none">·</span>
                         )}
                       </span>
                     ))}
@@ -146,7 +146,7 @@ export default function TeamPage() {
       </section>
 
       {/* ── 3. JOIN US ── */}
-      <section className="bg-[#f7f5f1] py-28 lg:py-36">
+      <section className="bg-[#0a1628] py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
 
@@ -154,10 +154,10 @@ export default function TeamPage() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold">
                 Careers
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
                 Join Our Team.
               </h2>
-              <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-lg">
+              <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-lg">
                 We're always looking for talented accountants, tax specialists,
                 and advisors who share our commitment to precision and client
                 partnership. If that sounds like you, we'd love to hear from you.
@@ -167,13 +167,13 @@ export default function TeamPage() {
             <div className="flex flex-col gap-5">
               <Link
                 href="/contact"
-                className="inline-block bg-navy text-white font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-gold transition-colors duration-300 text-center"
+                className="inline-block bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-[#d4a843] transition-colors duration-300 text-center"
               >
                 Get In Touch
               </Link>
               <a
                 href="mailto:info@eppartnerskh.com"
-                className="font-sans text-[11px] tracking-[0.1em] text-navy/45 hover:text-navy transition-colors text-center"
+                className="font-sans text-[11px] tracking-[0.1em] text-white/45 hover:text-white transition-colors text-center"
               >
                 info@eppartnerskh.com
               </a>
@@ -183,12 +183,12 @@ export default function TeamPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-navy py-10 border-t border-white/5">
+      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto mix-blend-multiply"
+            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

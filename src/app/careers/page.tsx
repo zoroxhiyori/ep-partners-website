@@ -132,19 +132,19 @@ export default function CareersPage() {
       </section>
 
       {/* ── 2. WHY JOIN ── */}
-      <section className="bg-white py-28 lg:py-36 border-b border-navy/8">
+      <section className="bg-navy py-28 lg:py-36 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20">
             <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
               Why EP Partners
             </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+            <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
               More Than a Job.
             </h2>
           </div>
 
-          <div className="flex flex-col divide-y divide-navy/10">
+          <div className="flex flex-col divide-y divide-white/10">
             {reasons.map(({ number, title, description }) => (
               <div
                 key={number}
@@ -153,10 +153,10 @@ export default function CareersPage() {
                 <span className="font-serif text-[3.5rem] font-light text-gold/25 leading-none">
                   {number}
                 </span>
-                <h3 className="font-serif text-xl font-medium text-navy">
+                <h3 className="font-serif text-xl font-medium text-white">
                   {title}
                 </h3>
-                <p className="font-sans text-[15px] leading-[1.85] text-navy/55">
+                <p className="font-sans text-[15px] leading-[1.85] text-white/60">
                   {description}
                 </p>
               </div>
@@ -166,7 +166,7 @@ export default function CareersPage() {
       </section>
 
       {/* ── 3. BENEFITS ── */}
-      <section className="bg-[#f7f5f1] py-28 lg:py-36">
+      <section className="bg-[#0a1628] py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
@@ -174,28 +174,28 @@ export default function CareersPage() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                 What You Get
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
                 Benefits &amp;<br />Perks.
               </h2>
             </div>
-            <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-xs lg:text-right">
+            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-xs lg:text-right">
               We take care of our people so our people can take care of our clients.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-navy/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
             {benefits.map(({ title, detail }) => (
               <div
                 key={title}
-                className="bg-[#f7f5f1] p-9 lg:p-10 flex flex-col gap-4 group hover:bg-white transition-colors duration-300"
+                className="bg-[#162444] p-9 lg:p-10 flex flex-col gap-4 group hover:bg-[#1a2d50] transition-colors duration-300"
               >
                 <div className="flex items-center gap-3">
                   <span className="w-[5px] h-[5px] rounded-full bg-gold shrink-0" />
-                  <h3 className="font-serif text-[1.15rem] font-medium text-navy group-hover:text-gold transition-colors duration-300">
+                  <h3 className="font-serif text-[1.15rem] font-medium text-white group-hover:text-gold transition-colors duration-300">
                     {title}
                   </h3>
                 </div>
-                <p className="font-sans text-sm leading-[1.8] text-navy/55 pl-[17px]">
+                <p className="font-sans text-sm leading-[1.8] text-white/60 pl-[17px]">
                   {detail}
                 </p>
               </div>
@@ -205,34 +205,34 @@ export default function CareersPage() {
       </section>
 
       {/* ── 4. OPEN POSITIONS ── */}
-      <section className="bg-white py-28 lg:py-36">
+      <section className="bg-navy py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20">
             <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
               Open Roles
             </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+            <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
               Current Openings.
             </h2>
           </div>
 
-          <div className="flex flex-col gap-px bg-navy/10">
+          <div className="flex flex-col gap-px bg-white/10">
             {positions.map(({ title, type, location, description, requirements }) => (
               <div
                 key={title}
-                className="bg-white px-10 lg:px-12 py-10 lg:py-12 flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16 group hover:bg-[#faf8f5] transition-colors duration-300"
+                className="bg-[#162444] px-10 lg:px-12 py-10 lg:py-12 flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16 group hover:bg-[#1a2d50] transition-colors duration-300"
               >
                 {/* Left: role info */}
                 <div className="flex flex-col gap-4 lg:w-64 shrink-0">
-                  <h3 className="font-serif text-2xl font-medium text-navy group-hover:text-gold transition-colors duration-300">
+                  <h3 className="font-serif text-2xl font-medium text-white group-hover:text-gold transition-colors duration-300">
                     {title}
                   </h3>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-white bg-navy px-3 py-1">
+                    <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-navy bg-gold px-3 py-1">
                       {type}
                     </span>
-                    <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-navy/50 border border-navy/20 px-3 py-1">
+                    <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-gold/70 border border-gold/30 px-3 py-1">
                       {location}
                     </span>
                   </div>
@@ -240,14 +240,14 @@ export default function CareersPage() {
 
                 {/* Middle: description + requirements */}
                 <div className="flex flex-col gap-5 flex-1">
-                  <p className="font-sans text-[14px] leading-[1.85] text-navy/60">
+                  <p className="font-sans text-[14px] leading-[1.85] text-white/60">
                     {description}
                   </p>
                   <ul className="flex flex-col gap-2">
                     {requirements.map((req, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className="mt-[8px] w-[4px] h-[4px] rounded-full bg-gold/60 shrink-0" />
-                        <span className="font-sans text-[13px] leading-[1.75] text-navy/55">
+                        <span className="font-sans text-[13px] leading-[1.75] text-white/60">
                           {req}
                         </span>
                       </li>
@@ -259,7 +259,7 @@ export default function CareersPage() {
                 <div className="shrink-0">
                   <a
                     href={`mailto:info@eppartnerskh.com?subject=Application: ${title}`}
-                    className="inline-block border border-navy text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-8 py-[13px] hover:bg-navy hover:text-white transition-colors duration-300 whitespace-nowrap"
+                    className="inline-block border border-gold text-gold font-sans text-[11px] tracking-[0.18em] uppercase px-8 py-[13px] hover:bg-gold hover:text-navy transition-colors duration-300 whitespace-nowrap"
                   >
                     Apply Now
                   </a>
@@ -271,7 +271,7 @@ export default function CareersPage() {
       </section>
 
       {/* ── 5. BOTTOM CTA ── */}
-      <section className="bg-navy py-28 lg:py-36 relative overflow-hidden">
+      <section className="bg-[#0a1628] py-28 lg:py-36 relative overflow-hidden">
         <span className="absolute top-10 right-10 w-16 h-px bg-gold/20 hidden lg:block" />
         <span className="absolute top-10 right-10 h-16 w-px bg-gold/20 hidden lg:block" />
         <span className="absolute bottom-10 left-10 w-16 h-px bg-gold/20 hidden lg:block" />
@@ -296,7 +296,7 @@ export default function CareersPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <a
                 href="mailto:info@eppartnerskh.com?subject=Speculative Application"
-                className="inline-block bg-white text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-gold hover:text-white transition-colors duration-300 shrink-0"
+                className="inline-block bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-[#d4a843] transition-colors duration-300 shrink-0"
               >
                 Send Your CV
               </a>
@@ -314,12 +314,12 @@ export default function CareersPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-navy py-10 border-t border-white/5">
+      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto mix-blend-multiply"
+            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

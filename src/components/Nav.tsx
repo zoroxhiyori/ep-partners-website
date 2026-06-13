@@ -20,7 +20,7 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-navy/8 shadow-[0_1px_8px_rgba(15,31,61,0.06)]">
+    <nav className="sticky top-0 z-50 bg-navy border-b border-gold/20 shadow-[0_2px_20px_rgba(0,0,0,0.3)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
 
         {/* Logo */}
@@ -28,7 +28,7 @@ export default function Nav() {
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-11 w-auto"
+            className="h-11 w-auto [filter:brightness(0)_invert(1)]"
           />
         </Link>
 
@@ -38,7 +38,7 @@ export default function Nav() {
             <li key={label}>
               <Link
                 href={href}
-                className="relative inline-block text-[11px] font-sans tracking-[0.15em] uppercase text-navy pb-1 group"
+                className="relative inline-block text-[11px] font-sans tracking-[0.15em] uppercase text-white/70 pb-1 group"
               >
                 {label}
                 <span className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-300 ease-out group-hover:w-full" />
@@ -59,13 +59,13 @@ export default function Nav() {
                   className={`transition-colors ${
                     activeLang === lang
                       ? "text-gold font-semibold"
-                      : "text-navy/50 hover:text-gold"
+                      : "text-white/40 hover:text-gold"
                   }`}
                 >
                   {lang}
                 </button>
                 {i < languages.length - 1 && (
-                  <span className="text-navy/20 select-none leading-none">|</span>
+                  <span className="text-white/20 select-none leading-none">|</span>
                 )}
               </span>
             ))}
@@ -78,17 +78,17 @@ export default function Nav() {
             className="lg:hidden flex flex-col justify-center gap-[5px] w-6 h-6"
           >
             <span
-              className={`block h-px bg-navy origin-center transition-all duration-200 ${
+              className={`block h-px bg-white origin-center transition-all duration-200 ${
                 menuOpen ? "w-5 rotate-45 translate-y-[7px]" : "w-5"
               }`}
             />
             <span
-              className={`block h-px bg-navy transition-all duration-200 ${
+              className={`block h-px bg-white transition-all duration-200 ${
                 menuOpen ? "w-5 opacity-0" : "w-4"
               }`}
             />
             <span
-              className={`block h-px bg-navy origin-center transition-all duration-200 ${
+              className={`block h-px bg-white origin-center transition-all duration-200 ${
                 menuOpen ? "w-5 -rotate-45 -translate-y-[7px]" : "w-5"
               }`}
             />
@@ -102,18 +102,18 @@ export default function Nav() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-navy/8 bg-white px-6 py-7 flex flex-col gap-6">
+        <div className="border-t border-white/10 bg-[#0a1628] px-6 py-7 flex flex-col gap-6">
           {navLinks.map(({ label, href }) => (
             <Link
               key={label}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="text-[11px] font-sans tracking-[0.15em] uppercase text-navy hover:text-gold transition-colors"
+              className="text-[11px] font-sans tracking-[0.15em] uppercase text-white/70 hover:text-gold transition-colors"
             >
               {label}
             </Link>
           ))}
-          <div className="flex items-center gap-2 text-[11px] font-sans tracking-[0.12em] pt-4 border-t border-navy/8">
+          <div className="flex items-center gap-2 text-[11px] font-sans tracking-[0.12em] pt-4 border-t border-white/10">
             {languages.map((lang, i) => (
               <span key={lang} className="flex items-center gap-2">
                 <button
@@ -121,13 +121,13 @@ export default function Nav() {
                   className={`transition-colors ${
                     activeLang === lang
                       ? "text-gold font-semibold"
-                      : "text-navy/50 hover:text-gold"
+                      : "text-white/40 hover:text-gold"
                   }`}
                 >
                   {lang}
                 </button>
                 {i < languages.length - 1 && (
-                  <span className="text-navy/20 select-none">|</span>
+                  <span className="text-white/20 select-none">|</span>
                 )}
               </span>
             ))}

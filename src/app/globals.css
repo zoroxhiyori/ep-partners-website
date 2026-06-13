@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f1f3d;
+  --background: #0f1f3d;
+  --foreground: #ffffff;
   --navy: #0f1f3d;
   --gold: #c9a84c;
+  --navy-dark: #0a1628;
+  --navy-card: #162444;
+  --navy-card-hover: #1a2d50;
 }
 
 @theme inline {
@@ -35,7 +38,7 @@ a {
 /* Selection color */
 ::selection {
   background: #c9a84c;
-  color: #ffffff;
+  color: #0f1f3d;
 }
 
 /* Remove default focus outline in favor of gold border */
@@ -44,11 +47,12 @@ a {
   outline-offset: 2px;
 }
 
-/* Normalize select elements */
+/* Normalize select elements for dark theme */
 select {
   color: inherit;
+  background: #162444;
 }
 select option {
-  color: #0f1f3d;
-  background: #ffffff;
+  color: #ffffff;
+  background: #162444;
 }

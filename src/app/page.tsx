@@ -53,7 +53,7 @@ export default function Home() {
     <main className="flex flex-col">
 
       {/* ── 1. HERO ── */}
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-white">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-navy">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-24 lg:py-0">
 
           {/* copy */}
@@ -61,47 +61,47 @@ export default function Home() {
             <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold">
               We Handle the Numbers
             </p>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] font-light text-navy leading-[1.05] tracking-tight">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] font-light text-white leading-[1.05] tracking-tight">
               You Focus<br />on Growth
             </h1>
-            <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-[400px]">
+            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-[400px]">
               We translate complex numbers into simple, actionable strategies,
               empowering you to grow your business with confidence.
             </p>
             <div className="pt-2 flex items-center gap-8">
               <Link
                 href="/contact"
-                className="inline-block bg-navy text-white font-sans text-[11px] tracking-[0.18em] uppercase px-9 py-[14px] hover:bg-gold transition-colors duration-300"
+                className="inline-block bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-9 py-[14px] hover:bg-[#d4a843] transition-colors duration-300"
               >
                 Let's Connect
               </Link>
-              <span className="hidden sm:block w-12 h-px bg-navy/15" />
+              <span className="hidden sm:block w-12 h-px bg-white/15" />
             </div>
           </div>
 
           {/* photo placeholder */}
-          <div className="relative aspect-[5/6] bg-[#f0ede7] overflow-hidden hidden lg:block">
+          <div className="relative aspect-[5/6] bg-[#162444] overflow-hidden hidden lg:block">
             <span className="absolute top-7 right-7 w-14 h-px bg-gold/50" />
             <span className="absolute top-7 right-7 h-14 w-px bg-gold/50" />
             <span className="absolute bottom-7 left-7 w-14 h-px bg-gold/50" />
             <span className="absolute bottom-7 left-7 h-14 w-px bg-gold/50" />
-            <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-navy/5" />
+            <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-white/[0.02]" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-serif text-[13rem] font-bold text-navy/[0.035] select-none leading-none">
+              <span className="font-serif text-[13rem] font-bold text-white/[0.035] select-none leading-none">
                 EP
               </span>
             </div>
-            <p className="absolute bottom-8 right-8 font-sans text-[9px] tracking-[0.22em] uppercase text-navy/25">
+            <p className="absolute bottom-8 right-8 font-sans text-[9px] tracking-[0.22em] uppercase text-white/25">
               Photo
             </p>
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-px bg-navy/8" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-white/10" />
       </section>
 
       {/* ── 2. PILLARS STRIP ── */}
-      <section className="bg-navy">
+      <section className="bg-[#0a1628]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {[
@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* ── 3. SERVICES OVERVIEW ── */}
-      <section className="bg-white py-28 lg:py-36">
+      <section className="bg-navy py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
@@ -129,30 +129,30 @@ export default function Home() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                 What We Offer
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
                 Your Numbers,<br />Perfected.
               </h2>
             </div>
-            <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-xs lg:text-right">
+            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-xs lg:text-right">
               We offer a suite of services designed to streamline your finances,
               translating complexity into actionable clarity.
             </p>
           </div>
 
           {/* cards — gap-px on a colored parent creates hairline dividers */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-navy/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {services.map(({ number, title, description }) => (
               <div
                 key={number}
-                className="bg-white p-9 lg:p-10 flex flex-col gap-5 group hover:bg-[#faf8f5] transition-colors duration-300"
+                className="bg-[#162444] p-9 lg:p-10 flex flex-col gap-5 group hover:bg-[#1a2d50] transition-colors duration-300"
               >
                 <span className="font-serif text-[2.75rem] font-light text-gold/35 leading-none">
                   {number}
                 </span>
-                <h3 className="font-serif text-[1.2rem] font-medium text-navy leading-snug group-hover:text-gold transition-colors duration-300">
+                <h3 className="font-serif text-[1.2rem] font-medium text-white leading-snug group-hover:text-gold transition-colors duration-300">
                   {title}
                 </h3>
-                <p className="font-sans text-sm leading-[1.8] text-navy/55 flex-1">
+                <p className="font-sans text-sm leading-[1.8] text-white/60 flex-1">
                   {description}
                 </p>
                 <span className="w-6 h-px bg-gold/40 group-hover:w-10 group-hover:bg-gold transition-all duration-300" />
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="mt-14 flex justify-center">
             <Link
               href="/services"
-              className="inline-block border border-navy text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-9 py-[14px] hover:bg-navy hover:text-white transition-colors duration-300"
+              className="inline-block border border-gold text-gold font-sans text-[11px] tracking-[0.18em] uppercase px-9 py-[14px] hover:bg-gold hover:text-navy transition-colors duration-300"
             >
               View All Services
             </Link>
@@ -172,19 +172,19 @@ export default function Home() {
       </section>
 
       {/* ── 4. WHY US ── */}
-      <section className="bg-[#f7f5f1] py-28 lg:py-36">
+      <section className="bg-[#0a1628] py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20">
             <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
               Why EP Partners
             </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy">
+            <h2 className="font-serif text-4xl lg:text-5xl font-light text-white">
               EP Partners Advantage
             </h2>
           </div>
 
-          <div className="flex flex-col divide-y divide-navy/10">
+          <div className="flex flex-col divide-y divide-white/10">
             {advantages.map(({ number, title, description }) => (
               <div
                 key={number}
@@ -193,10 +193,10 @@ export default function Home() {
                 <span className="font-serif text-[3.5rem] font-light text-gold/25 leading-none">
                   {number}
                 </span>
-                <h3 className="font-serif text-xl font-medium text-navy">
+                <h3 className="font-serif text-xl font-medium text-white">
                   {title}
                 </h3>
-                <p className="font-sans text-[15px] leading-[1.85] text-navy/55">
+                <p className="font-sans text-[15px] leading-[1.85] text-white/60">
                   {description}
                 </p>
               </div>
@@ -206,17 +206,17 @@ export default function Home() {
       </section>
 
       {/* ── 5. WHO WE ARE ── */}
-      <section className="bg-white py-28 lg:py-36">
+      <section className="bg-navy py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
             {/* photo placeholder */}
-            <div className="relative aspect-[4/3] bg-navy overflow-hidden">
+            <div className="relative aspect-[4/3] bg-[#162444] overflow-hidden">
               <span className="absolute top-7 left-7 w-14 h-px bg-gold/50" />
               <span className="absolute top-7 left-7 h-14 w-px bg-gold/50" />
               <span className="absolute bottom-7 right-7 w-14 h-px bg-gold/50" />
               <span className="absolute bottom-7 right-7 h-14 w-px bg-gold/50" />
-              <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.025]" />
+              <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02]" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="font-serif text-[11rem] font-bold text-white/[0.04] select-none leading-none">
                   EP
@@ -232,17 +232,17 @@ export default function Home() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold">
                 Who We Are
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl xl:text-[3.4rem] font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl xl:text-[3.4rem] font-light text-white leading-[1.1]">
                 Beyond the<br />Balance Sheet.
               </h2>
-              <p className="font-sans text-[15px] leading-[1.85] text-navy/55">
+              <p className="font-sans text-[15px] leading-[1.85] text-white/60">
                 We're a team of dedicated experts passionate about helping you
                 succeed, translating complex metrics into actionable clarity.
               </p>
               <div className="pt-2">
                 <Link
                   href="/about"
-                  className="inline-block border border-navy text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-9 py-[14px] hover:bg-navy hover:text-white transition-colors duration-300"
+                  className="inline-block border border-gold text-gold font-sans text-[11px] tracking-[0.18em] uppercase px-9 py-[14px] hover:bg-gold hover:text-navy transition-colors duration-300"
                 >
                   More About Us
                 </Link>
@@ -253,12 +253,12 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-navy py-10 border-t border-white/5">
+      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto mix-blend-multiply"
+            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

@@ -176,7 +176,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 2. SERVICE CARDS + 3. ACCORDION ── */}
-      <section className="bg-white py-28 lg:py-36">
+      <section className="bg-navy py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
@@ -184,17 +184,17 @@ export default function ServicesPage() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                 Our Services
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
                 Eight Disciplines.<br />One Partnership.
               </h2>
             </div>
-            <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-xs lg:text-right">
+            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-xs lg:text-right">
               Select any service to explore the full scope of what we deliver.
             </p>
           </div>
 
           {/* Cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-navy/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {services.map(({ number, title, description }, index) => {
               const isActive = activeIndex === index;
               return (
@@ -202,7 +202,7 @@ export default function ServicesPage() {
                   key={number}
                   onClick={() => handleCardClick(index)}
                   className={`text-left p-9 lg:p-10 flex flex-col gap-5 group transition-colors duration-300 focus:outline-none ${
-                    isActive ? "bg-navy" : "bg-white hover:bg-[#faf8f5]"
+                    isActive ? "bg-[#0a1628]" : "bg-[#162444] hover:bg-[#1a2d50]"
                   }`}
                 >
                   <span
@@ -215,15 +215,15 @@ export default function ServicesPage() {
                   <h3
                     className={`font-serif text-[1.2rem] font-medium leading-snug transition-colors duration-300 ${
                       isActive
-                        ? "text-white"
-                        : "text-navy group-hover:text-gold"
+                        ? "text-gold"
+                        : "text-white group-hover:text-gold"
                     }`}
                   >
                     {title}
                   </h3>
                   <p
                     className={`font-sans text-sm leading-[1.8] flex-1 transition-colors duration-300 ${
-                      isActive ? "text-white/50" : "text-navy/55"
+                      isActive ? "text-white/60" : "text-white/60"
                     }`}
                   >
                     {description}
@@ -247,7 +247,7 @@ export default function ServicesPage() {
             }`}
           >
             {activeService && (
-              <div className="border border-t-0 border-navy/10 bg-[#f7f5f1] px-10 lg:px-14 py-12 lg:py-14">
+              <div className="border border-t-0 border-white/10 bg-[#0a1628] px-10 lg:px-14 py-12 lg:py-14">
                 <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-20 items-start">
 
                   {/* Left: title */}
@@ -255,7 +255,7 @@ export default function ServicesPage() {
                     <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-4">
                       Service {activeService.number}
                     </p>
-                    <h3 className="font-serif text-2xl lg:text-3xl font-light text-navy leading-[1.2]">
+                    <h3 className="font-serif text-2xl lg:text-3xl font-light text-white leading-[1.2]">
                       {activeService.title}
                     </h3>
                     <span className="mt-6 block w-8 h-px bg-gold" />
@@ -266,7 +266,7 @@ export default function ServicesPage() {
                     {activeService.subServices.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <span className="mt-[7px] w-[4px] h-[4px] rounded-full bg-gold shrink-0" />
-                        <p className="font-sans text-[14px] leading-[1.75] text-navy/70">
+                        <p className="font-sans text-[14px] leading-[1.75] text-white/70">
                           {item}
                         </p>
                       </div>
@@ -280,7 +280,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 4. METHODOLOGY ── */}
-      <section className="bg-navy py-28 lg:py-36">
+      <section className="bg-[#0a1628] py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20">
@@ -292,7 +292,7 @@ export default function ServicesPage() {
             </h2>
           </div>
 
-          <div className="flex flex-col divide-y divide-white/8">
+          <div className="flex flex-col divide-y divide-white/10">
             {methodology.map(({ phase, title, description }) => (
               <div
                 key={phase}
@@ -304,7 +304,7 @@ export default function ServicesPage() {
                 <h3 className="font-serif text-xl lg:text-2xl font-medium text-white">
                   {title}
                 </h3>
-                <p className="font-sans text-[15px] leading-[1.85] text-white/45">
+                <p className="font-sans text-[15px] leading-[1.85] text-white/60">
                   {description}
                 </p>
               </div>
@@ -314,7 +314,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 5. CTA ── */}
-      <section className="bg-white py-28 lg:py-36 border-b border-navy/8">
+      <section className="bg-navy py-28 lg:py-36 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
 
@@ -322,10 +322,10 @@ export default function ServicesPage() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold">
                 Get Started
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl xl:text-[3.4rem] font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl xl:text-[3.4rem] font-light text-white leading-[1.1]">
                 Not sure which service<br className="hidden lg:block" /> you need?
               </h2>
-              <p className="font-sans text-[15px] leading-[1.85] text-navy/55">
+              <p className="font-sans text-[15px] leading-[1.85] text-white/60">
                 Our advisors will assess your situation and recommend the right
                 combination of services — no commitment required.
               </p>
@@ -334,18 +334,18 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <Link
                 href="/contact"
-                className="inline-block bg-navy text-white font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-gold transition-colors duration-300 shrink-0"
+                className="inline-block bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-[#d4a843] transition-colors duration-300 shrink-0"
               >
                 Let's Connect
               </Link>
               <div className="flex flex-col gap-1.5">
                 <a
                   href="mailto:info@eppartnerskh.com"
-                  className="font-sans text-[11px] tracking-[0.1em] text-navy/45 hover:text-navy transition-colors"
+                  className="font-sans text-[11px] tracking-[0.1em] text-white/50 hover:text-white transition-colors"
                 >
                   info@eppartnerskh.com
                 </a>
-                <p className="font-sans text-[11px] tracking-[0.1em] text-navy/30">
+                <p className="font-sans text-[11px] tracking-[0.1em] text-white/30">
                   Response within one business day
                 </p>
               </div>
@@ -355,12 +355,12 @@ export default function ServicesPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-navy py-10 border-t border-white/5">
+      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto mix-blend-multiply"
+            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

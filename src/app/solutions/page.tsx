@@ -143,7 +143,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* ── 2. SOLUTION CARDS ── */}
-      <section className="bg-white py-28 lg:py-36">
+      <section className="bg-navy py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
@@ -151,35 +151,35 @@ export default function SolutionsPage() {
               <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
                 Who We Serve
               </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
                 Six Verticals.<br />One Team.
               </h2>
             </div>
-            <p className="font-sans text-[15px] leading-[1.85] text-navy/55 max-w-xs lg:text-right">
+            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-xs lg:text-right">
               Deep sector knowledge delivered through a single, coordinated
               point of contact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-navy/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
             {solutions.map(({ number, title, tagline, description, features, accent }) => (
               <div
                 key={number}
-                className="bg-white p-10 lg:p-12 flex flex-col gap-6 group hover:bg-[#faf8f5] transition-colors duration-300"
+                className="bg-[#162444] p-10 lg:p-12 flex flex-col gap-6 group hover:bg-[#1a2d50] transition-colors duration-300"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-serif text-[2.75rem] font-light text-gold/35 leading-none">
                     {number}
                   </span>
-                  <span className="font-sans text-[9px] tracking-[0.22em] uppercase text-navy/25 mt-2 text-right">
+                  <span className="font-sans text-[9px] tracking-[0.22em] uppercase text-white/25 mt-2 text-right">
                     {accent}
                   </span>
                 </div>
 
                 {/* Title & tagline */}
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-serif text-[1.35rem] font-medium text-navy leading-snug group-hover:text-gold transition-colors duration-300">
+                  <h3 className="font-serif text-[1.35rem] font-medium text-white leading-snug group-hover:text-gold transition-colors duration-300">
                     {title}
                   </h3>
                   <p className="font-sans text-[11px] tracking-[0.12em] uppercase text-gold/80">
@@ -188,7 +188,7 @@ export default function SolutionsPage() {
                 </div>
 
                 {/* Description */}
-                <p className="font-sans text-sm leading-[1.85] text-navy/55">
+                <p className="font-sans text-sm leading-[1.85] text-white/60">
                   {description}
                 </p>
 
@@ -197,7 +197,7 @@ export default function SolutionsPage() {
                   {features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="mt-[8px] w-[4px] h-[4px] rounded-full bg-gold/60 shrink-0" />
-                      <span className="font-sans text-[13px] leading-[1.75] text-navy/60">
+                      <span className="font-sans text-[13px] leading-[1.75] text-white/60">
                         {feature}
                       </span>
                     </li>
@@ -213,19 +213,19 @@ export default function SolutionsPage() {
       </section>
 
       {/* ── 3. DIFFERENTIATORS ── */}
-      <section className="bg-[#f7f5f1] py-28 lg:py-36">
+      <section className="bg-[#0a1628] py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="mb-16 lg:mb-20">
             <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
               Why EP Partners
             </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-navy leading-[1.1]">
+            <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
               The EP Partners<br />Difference.
             </h2>
           </div>
 
-          <div className="flex flex-col divide-y divide-navy/10">
+          <div className="flex flex-col divide-y divide-white/10">
             {differentiators.map(({ number, title, description }) => (
               <div
                 key={number}
@@ -234,10 +234,10 @@ export default function SolutionsPage() {
                 <span className="font-serif text-[3.5rem] font-light text-gold/25 leading-none">
                   {number}
                 </span>
-                <h3 className="font-serif text-xl font-medium text-navy">
+                <h3 className="font-serif text-xl font-medium text-white">
                   {title}
                 </h3>
-                <p className="font-sans text-[15px] leading-[1.85] text-navy/55">
+                <p className="font-sans text-[15px] leading-[1.85] text-white/60">
                   {description}
                 </p>
               </div>
@@ -272,7 +272,7 @@ export default function SolutionsPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <Link
                 href="/contact"
-                className="inline-block bg-white text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-gold hover:text-white transition-colors duration-300 shrink-0"
+                className="inline-block bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-[#d4a843] transition-colors duration-300 shrink-0"
               >
                 Let's Connect
               </Link>
@@ -293,12 +293,12 @@ export default function SolutionsPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-navy py-10 border-t border-white/5">
+      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto mix-blend-multiply"
+            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a
