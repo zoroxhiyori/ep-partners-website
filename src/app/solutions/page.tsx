@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const solutions = [
   {
@@ -118,22 +119,15 @@ export default function SolutionsPage() {
   return (
     <main className="flex flex-col">
 
-      {/* ── 1. HERO ── */}
-      <section className="bg-navy relative overflow-hidden">
-        <span className="absolute top-12 left-12 w-20 h-px bg-gold/30 hidden lg:block" />
-        <span className="absolute top-12 left-12 h-20 w-px bg-gold/30 hidden lg:block" />
-        <span className="absolute bottom-12 right-12 w-20 h-px bg-gold/30 hidden lg:block" />
-        <span className="absolute bottom-12 right-12 h-20 w-px bg-gold/30 hidden lg:block" />
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-40 pb-28 lg:pb-36">
+      {/* 1. HERO — navy */}
+      <section className="bg-[#0f1f3d] relative overflow-hidden">
+        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-28">
           <div className="max-w-3xl">
-            <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-6">
-              Industry Solutions
-            </p>
-            <h1 className="font-serif text-5xl md:text-7xl font-light leading-[1.05] tracking-tight text-white">
+            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c] mb-4">Industry Solutions</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white">
               Built for Your<br />Industry.
             </h1>
-            <p className="mt-8 font-sans text-[15px] leading-[1.85] text-white/45 max-w-md">
+            <p className="mt-6 text-base leading-relaxed text-white/65 max-w-md">
               Six tailored solution sets — each designed around the specific
               regulatory, financial, and operational realities of your sector
               in Cambodia.
@@ -142,180 +136,101 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* ── 2. SOLUTION CARDS ── */}
-      <section className="bg-navy py-28 lg:py-36">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-
-          <div className="mb-16 lg:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      {/* 2. SOLUTION CARDS — white */}
+      <section className="bg-white py-16 sm:py-20 lg:py-28">
+        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="mb-12 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
-              <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
-                Who We Serve
-              </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
-                Six Verticals.<br />One Team.
-              </h2>
+              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c] mb-4">Who We Serve</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#0f1f3d] leading-tight">Six Verticals.<br />One Team.</h2>
             </div>
-            <p className="font-sans text-[15px] leading-[1.85] text-white/60 max-w-xs lg:text-right">
-              Deep sector knowledge delivered through a single, coordinated
-              point of contact.
+            <p className="text-base text-[#445571] max-w-xs lg:text-right leading-relaxed">
+              Deep sector knowledge delivered through a single, coordinated point of contact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {solutions.map(({ number, title, tagline, description, features, accent }) => (
               <div
                 key={number}
-                className="relative bg-[#162444] border border-white/10 hover:border-gold p-10 lg:p-12 flex flex-col gap-6 group hover:bg-[#1a2d50] hover:z-10 transition-colors duration-300"
+                className="bg-[#f4f5f7] border border-[#e5e7eb] rounded-lg p-6 sm:p-8 lg:p-10 flex flex-col gap-5 hover:border-[#c9a84c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
               >
-                {/* Header */}
                 <div className="flex items-start justify-between gap-4">
-                  <span className="font-serif text-[2.75rem] font-light text-gold/35 leading-none">
-                    {number}
-                  </span>
-                  <span className="font-sans text-[9px] tracking-[0.22em] uppercase text-white/25 mt-2 text-right">
-                    {accent}
-                  </span>
+                  <span className="text-3xl font-bold text-[#c9a84c]/50 leading-none">{number}</span>
+                  <span className="text-[9px] tracking-[0.22em] uppercase text-[#445571]/40 mt-2 text-right">{accent}</span>
                 </div>
 
-                {/* Title & tagline */}
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-serif text-[1.35rem] font-medium text-white leading-snug group-hover:text-gold transition-colors duration-300">
-                    {title}
-                  </h3>
-                  <p className="font-sans text-[11px] tracking-[0.12em] uppercase text-gold/80">
-                    {tagline}
-                  </p>
+                  <h3 className="text-xl font-semibold text-[#0f1f3d] leading-snug group-hover:text-[#c9a84c] transition-colors duration-300">{title}</h3>
+                  <p className="text-xs tracking-[0.12em] uppercase text-[#c9a84c]/80 font-semibold">{tagline}</p>
                 </div>
 
-                {/* Description */}
-                <p className="font-sans text-sm leading-[1.85] text-white/50">
-                  {description}
-                </p>
+                <p className="text-sm leading-relaxed text-[#445571]">{description}</p>
 
-                {/* Feature list */}
-                <ul className="flex flex-col gap-3 flex-1">
+                <ul className="flex flex-col gap-2.5 flex-1">
                   {features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="mt-[8px] w-[4px] h-[4px] rounded-full bg-gold/60 shrink-0" />
-                      <span className="font-sans text-[13px] leading-[1.75] text-white/50">
-                        {feature}
-                      </span>
+                      <span className="mt-2 w-1 h-1 rounded-full bg-[#c9a84c]/60 shrink-0" />
+                      <span className="text-sm leading-relaxed text-[#445571]">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                {/* Bottom accent line */}
-                <span className="w-6 h-px bg-gold/40 group-hover:w-10 group-hover:bg-gold transition-all duration-300 mt-2" />
+                <span className="w-8 h-0.5 bg-[#c9a84c]/40 group-hover:w-12 group-hover:bg-[#c9a84c] transition-all duration-300" />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 3. DIFFERENTIATORS ── */}
-      <section className="bg-[#0a1628] py-28 lg:py-36">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-
-          <div className="mb-16 lg:mb-20">
-            <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold mb-5">
-              Why EP Partners
-            </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
-              The EP Partners<br />Difference.
-            </h2>
+      {/* 3. DIFFERENTIATORS — light gray */}
+      <section className="bg-[#f4f5f7] py-16 sm:py-20 lg:py-28">
+        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="mb-12 lg:mb-16">
+            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c] mb-4">Why EP Partners</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0f1f3d] leading-tight">The EP Partners<br />Difference.</h2>
           </div>
 
-          <div className="flex flex-col divide-y divide-white/10">
+          <div className="flex flex-col divide-y divide-[#0f1f3d]/10">
             {differentiators.map(({ number, title, description }) => (
-              <div
-                key={number}
-                className="py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-[100px_240px_1fr] gap-3 lg:gap-12 items-baseline"
-              >
-                <span className="font-serif text-[3.5rem] font-light text-gold/25 leading-none">
-                  {number}
-                </span>
-                <h3 className="font-serif text-xl font-medium text-white">
-                  {title}
-                </h3>
-                <p className="font-sans text-[15px] leading-[1.85] text-white/60">
-                  {description}
-                </p>
+              <div key={number} className="py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-[80px_240px_1fr] gap-3 lg:gap-10 items-baseline">
+                <span className="text-4xl font-bold text-[#c9a84c]/40 leading-none">{number}</span>
+                <h3 className="text-xl font-semibold text-[#0f1f3d]">{title}</h3>
+                <p className="text-base leading-relaxed text-[#445571]">{description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 4. CTA ── */}
-      <section className="bg-navy py-28 lg:py-36 relative overflow-hidden">
-        <span className="absolute top-10 right-10 w-16 h-px bg-gold/20 hidden lg:block" />
-        <span className="absolute top-10 right-10 h-16 w-px bg-gold/20 hidden lg:block" />
-        <span className="absolute bottom-10 left-10 w-16 h-px bg-gold/20 hidden lg:block" />
-        <span className="absolute bottom-10 left-10 h-16 w-px bg-gold/20 hidden lg:block" />
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* 4. CTA — navy */}
+      <section className="bg-[#0f1f3d] py-16 sm:py-20 lg:py-28">
+        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
-
-            <div className="flex flex-col gap-5 max-w-xl">
-              <p className="text-[10px] font-sans tracking-[0.25em] uppercase text-gold">
-                Let's Talk
-              </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-light text-white leading-[1.1]">
-                Don't see your<br />industry listed?
-              </h2>
-              <p className="font-sans text-[15px] leading-[1.85] text-white/45">
+            <div className="flex flex-col gap-4 max-w-xl">
+              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c]">Let's Talk</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">Don't see your<br />industry listed?</h2>
+              <p className="text-base leading-relaxed text-white/65">
                 We work with businesses across all sectors in Cambodia. Tell us
                 about your situation and we'll tailor a solution that fits.
               </p>
             </div>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-              <Link
-                href="/contact"
-                className="inline-block bg-gold text-navy font-sans text-[11px] tracking-[0.18em] uppercase px-10 py-[15px] hover:bg-[#d4a843] transition-colors duration-300 shrink-0"
-              >
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <Link href="/contact" className="inline-block bg-[#c9a84c] text-[#0f1f3d] rounded-md px-6 py-3 text-sm font-semibold hover:bg-[#b8972a] transition-all duration-200 w-full sm:w-auto text-center">
                 Let's Connect
               </Link>
-              <div className="flex flex-col gap-1.5">
-                <Link
-                  href="/services"
-                  className="font-sans text-[11px] tracking-[0.1em] text-white/45 hover:text-gold transition-colors"
-                >
+              <div className="flex flex-col gap-1">
+                <Link href="/services" className="text-sm !text-white/45 hover:!text-[#c9a84c] transition-colors">
                   View all services →
                 </Link>
-                <p className="font-sans text-[11px] tracking-[0.1em] text-white/25">
-                  Or explore our full service offering
-                </p>
+                <p className="text-xs text-white/25">Or explore our full service offering</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="bg-[#0a1628] py-10 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <img
-            src="/images/EP_partner_logo.png"
-            alt="EP Partners"
-            className="w-auto"
-            style={{ mixBlendMode: 'screen', height: '36px', opacity: 0.85 }}
-          />
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
-            <a
-              href="mailto:info@eppartnerskh.com"
-              className="font-sans text-[11px] tracking-[0.1em] text-white/35 hover:text-gold transition-colors"
-            >
-              info@eppartnerskh.com
-            </a>
-            <span className="hidden sm:block w-px h-3 bg-white/15" />
-            <p className="font-sans text-[11px] tracking-[0.1em] text-white/30 uppercase">
-              © 2012 EP Partners
-            </p>
-          </div>
-        </div>
-      </footer>
-
+      <Footer />
     </main>
   );
 }
