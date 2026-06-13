@@ -279,7 +279,7 @@ export default function SolutionsPage() {
               <div className="flex flex-col gap-1.5">
                 <Link
                   href="/services"
-                  className="font-sans text-[11px] tracking-[0.1em] text-white/45 hover:text-white transition-colors"
+                  className="font-sans text-[11px] tracking-[0.1em] text-white/45 hover:text-gold transition-colors"
                 >
                   View all services →
                 </Link>
@@ -303,7 +303,7 @@ export default function SolutionsPage() {
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a
               href="mailto:info@eppartnerskh.com"
-              className="font-sans text-[11px] tracking-[0.1em] text-white/35 hover:text-white/60 transition-colors"
+              className="font-sans text-[11px] tracking-[0.1em] text-white/35 hover:text-gold transition-colors"
             >
               info@eppartnerskh.com
             </a>

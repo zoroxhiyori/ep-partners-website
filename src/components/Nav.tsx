@@ -20,7 +20,7 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-[0_1px_8px_rgba(15,31,61,0.06)]">
+    <nav className="sticky top-0 z-50 bg-white border-b border-navy/8 shadow-[0_1px_8px_rgba(15,31,61,0.06)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
 
         {/* Logo */}
@@ -59,7 +59,7 @@ export default function Nav() {
                   className={`transition-colors ${
                     activeLang === lang
                       ? "text-gold font-semibold"
-                      : "text-navy/50 hover:text-navy"
+                      : "text-navy/50 hover:text-gold"
                   }`}
                 >
                   {lang}
@@ -102,7 +102,7 @@ export default function Nav() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-gray-100 bg-white px-6 py-7 flex flex-col gap-6">
+        <div className="border-t border-navy/8 bg-white px-6 py-7 flex flex-col gap-6">
           {navLinks.map(({ label, href }) => (
             <Link
               key={label}
@@ -113,7 +113,7 @@ export default function Nav() {
               {label}
             </Link>
           ))}
-          <div className="flex items-center gap-2 text-[11px] font-sans tracking-[0.12em] pt-4 border-t border-gray-100">
+          <div className="flex items-center gap-2 text-[11px] font-sans tracking-[0.12em] pt-4 border-t border-navy/8">
             {languages.map((lang, i) => (
               <span key={lang} className="flex items-center gap-2">
                 <button
@@ -121,7 +121,7 @@ export default function Nav() {
                   className={`transition-colors ${
                     activeLang === lang
                       ? "text-gold font-semibold"
-                      : "text-navy/50 hover:text-navy"
+                      : "text-navy/50 hover:text-gold"
                   }`}
                 >
                   {lang}
