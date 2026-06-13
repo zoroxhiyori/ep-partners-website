@@ -24,11 +24,12 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
 
         {/* Logo */}
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="shrink-0 px-1">
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-11 w-auto [filter:brightness(0)_invert(1)]"
+            className="w-auto"
+            style={{ mixBlendMode: 'screen', height: '44px' }}
           />
         </Link>
 
@@ -59,7 +60,7 @@ export default function Nav() {
                   className={`transition-colors ${
                     activeLang === lang
                       ? "text-gold font-semibold"
-                      : "text-white/40 hover:text-gold"
+                      : "text-white/60 hover:text-gold"
                   }`}
                 >
                   {lang}
@@ -121,7 +122,7 @@ export default function Nav() {
                   className={`transition-colors ${
                     activeLang === lang
                       ? "text-gold font-semibold"
-                      : "text-white/40 hover:text-gold"
+                      : "text-white/60 hover:text-gold"
                   }`}
                 >
                   {lang}

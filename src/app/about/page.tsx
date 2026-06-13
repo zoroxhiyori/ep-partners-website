@@ -175,7 +175,7 @@ export default function AboutPage() {
             {values.map(({ number, title, description }) => (
               <div
                 key={number}
-                className="bg-[#162444] p-10 lg:p-12 flex flex-col gap-5 group hover:bg-[#1a2d50] transition-colors duration-300"
+                className="relative bg-[#162444] border border-white/10 hover:border-gold p-10 lg:p-12 flex flex-col gap-5 group hover:bg-[#1a2d50] hover:z-10 transition-colors duration-300"
               >
                 <span className="font-serif text-[2.5rem] font-light text-gold/30 leading-none">
                   {number}
@@ -183,7 +183,7 @@ export default function AboutPage() {
                 <h3 className="font-serif text-2xl font-medium text-white group-hover:text-gold transition-colors duration-300">
                   {title}
                 </h3>
-                <p className="font-sans text-sm leading-[1.85] text-white/60">
+                <p className="font-sans text-sm leading-[1.85] text-white/50">
                   {description}
                 </p>
                 <span className="w-6 h-px bg-gold/30 group-hover:w-10 group-hover:bg-gold transition-all duration-300 mt-auto pt-4" />
@@ -199,7 +199,8 @@ export default function AboutPage() {
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
+            className="w-auto"
+            style={{ mixBlendMode: 'screen', height: '36px', opacity: 0.85 }}
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

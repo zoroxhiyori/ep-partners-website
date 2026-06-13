@@ -202,7 +202,7 @@ export default function ServicesPage() {
                   key={number}
                   onClick={() => handleCardClick(index)}
                   className={`text-left p-9 lg:p-10 flex flex-col gap-5 group transition-colors duration-300 focus:outline-none ${
-                    isActive ? "bg-[#0a1628]" : "bg-[#162444] hover:bg-[#1a2d50]"
+                    isActive ? "bg-[#0a1628] border border-gold/40 z-10" : "relative bg-[#162444] border border-white/10 hover:border-gold hover:bg-[#1a2d50] hover:z-10"
                   }`}
                 >
                   <span
@@ -266,7 +266,7 @@ export default function ServicesPage() {
                     {activeService.subServices.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <span className="mt-[7px] w-[4px] h-[4px] rounded-full bg-gold shrink-0" />
-                        <p className="font-sans text-[14px] leading-[1.75] text-white/70">
+                        <p className="font-sans text-[14px] leading-[1.75] text-white/60">
                           {item}
                         </p>
                       </div>
@@ -360,7 +360,8 @@ export default function ServicesPage() {
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
+            className="w-auto"
+            style={{ mixBlendMode: 'screen', height: '36px', opacity: 0.85 }}
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

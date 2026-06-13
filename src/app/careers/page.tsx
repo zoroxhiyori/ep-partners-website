@@ -187,7 +187,7 @@ export default function CareersPage() {
             {benefits.map(({ title, detail }) => (
               <div
                 key={title}
-                className="bg-[#162444] p-9 lg:p-10 flex flex-col gap-4 group hover:bg-[#1a2d50] transition-colors duration-300"
+                className="relative bg-[#162444] border border-white/10 hover:border-gold p-9 lg:p-10 flex flex-col gap-4 group hover:bg-[#1a2d50] hover:z-10 transition-colors duration-300"
               >
                 <div className="flex items-center gap-3">
                   <span className="w-[5px] h-[5px] rounded-full bg-gold shrink-0" />
@@ -195,7 +195,7 @@ export default function CareersPage() {
                     {title}
                   </h3>
                 </div>
-                <p className="font-sans text-sm leading-[1.8] text-white/60 pl-[17px]">
+                <p className="font-sans text-sm leading-[1.8] text-white/50 pl-[17px]">
                   {detail}
                 </p>
               </div>
@@ -221,7 +221,7 @@ export default function CareersPage() {
             {positions.map(({ title, type, location, description, requirements }) => (
               <div
                 key={title}
-                className="bg-[#162444] px-10 lg:px-12 py-10 lg:py-12 flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16 group hover:bg-[#1a2d50] transition-colors duration-300"
+                className="relative bg-[#162444] border border-white/10 hover:border-gold px-10 lg:px-12 py-10 lg:py-12 flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16 group hover:bg-[#1a2d50] hover:z-10 transition-colors duration-300"
               >
                 {/* Left: role info */}
                 <div className="flex flex-col gap-4 lg:w-64 shrink-0">
@@ -240,14 +240,14 @@ export default function CareersPage() {
 
                 {/* Middle: description + requirements */}
                 <div className="flex flex-col gap-5 flex-1">
-                  <p className="font-sans text-[14px] leading-[1.85] text-white/60">
+                  <p className="font-sans text-[14px] leading-[1.85] text-white/50">
                     {description}
                   </p>
                   <ul className="flex flex-col gap-2">
                     {requirements.map((req, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className="mt-[8px] w-[4px] h-[4px] rounded-full bg-gold/60 shrink-0" />
-                        <span className="font-sans text-[13px] leading-[1.75] text-white/60">
+                        <span className="font-sans text-[13px] leading-[1.75] text-white/50">
                           {req}
                         </span>
                       </li>
@@ -319,7 +319,8 @@ export default function CareersPage() {
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
+            className="w-auto"
+            style={{ mixBlendMode: 'screen', height: '36px', opacity: 0.85 }}
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

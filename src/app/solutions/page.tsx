@@ -165,7 +165,7 @@ export default function SolutionsPage() {
             {solutions.map(({ number, title, tagline, description, features, accent }) => (
               <div
                 key={number}
-                className="bg-[#162444] p-10 lg:p-12 flex flex-col gap-6 group hover:bg-[#1a2d50] transition-colors duration-300"
+                className="relative bg-[#162444] border border-white/10 hover:border-gold p-10 lg:p-12 flex flex-col gap-6 group hover:bg-[#1a2d50] hover:z-10 transition-colors duration-300"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between gap-4">
@@ -188,7 +188,7 @@ export default function SolutionsPage() {
                 </div>
 
                 {/* Description */}
-                <p className="font-sans text-sm leading-[1.85] text-white/60">
+                <p className="font-sans text-sm leading-[1.85] text-white/50">
                   {description}
                 </p>
 
@@ -197,7 +197,7 @@ export default function SolutionsPage() {
                   {features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="mt-[8px] w-[4px] h-[4px] rounded-full bg-gold/60 shrink-0" />
-                      <span className="font-sans text-[13px] leading-[1.75] text-white/60">
+                      <span className="font-sans text-[13px] leading-[1.75] text-white/50">
                         {feature}
                       </span>
                     </li>
@@ -298,7 +298,8 @@ export default function SolutionsPage() {
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
+            className="w-auto"
+            style={{ mixBlendMode: 'screen', height: '36px', opacity: 0.85 }}
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a

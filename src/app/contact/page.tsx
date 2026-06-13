@@ -323,7 +323,8 @@ export default function ContactPage() {
           <img
             src="/images/EP_partner_logo.png"
             alt="EP Partners"
-            className="h-9 w-auto opacity-60 [filter:brightness(0)_invert(1)]"
+            className="w-auto"
+            style={{ mixBlendMode: 'screen', height: '36px', opacity: 0.85 }}
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-center">
             <a
