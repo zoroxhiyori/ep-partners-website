@@ -2,7 +2,7 @@
 title: "Cambodia Tax Filing Deadlines 2025 — Complete Guide"
 date: "2025-01-15"
 category: "Tax & Accounting"
-languages: ["EN", "KH", "ZH"]
+languages: ["EN", "KH", "CH"]
 excerpt: "A comprehensive overview of all key tax filing deadlines for businesses in Cambodia in 2025, including monthly obligations, annual returns, and critical GDT submission dates."
 author: "EP Partners Team"
 readTime: 8

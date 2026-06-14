@@ -2,7 +2,7 @@
 title: "M&A Activity in Cambodia: Q1 2025 Market Overview"
 date: "2025-05-01"
 category: "Business & Investment"
-languages: ["EN", "ZH"]
+languages: ["EN", "CH"]
 excerpt: "Cambodia's mergers and acquisitions market showed steady deal flow in Q1 2025, with notable activity in banking, logistics, and technology sectors. We review key trends and cross-border deal considerations."
 author: "EP Partners Team"
 readTime: 11

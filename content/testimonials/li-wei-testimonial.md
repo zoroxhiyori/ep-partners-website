@@ -3,7 +3,7 @@ name: "Li Wei"
 role: "CFO"
 company: "Sino-Khmer Trading Co."
 rating: 5
-language: "ZH"
+language: "CH"
 date: "2024-11-15"
 avatar_initials: "LW"
 category: "Tax & Accounting"

@@ -2,7 +2,7 @@
 title: "Foreign Investment Incentives in Cambodia's Special Economic Zones"
 date: "2025-03-25"
 category: "Business & Investment"
-languages: ["EN", "ZH"]
+languages: ["EN", "CH"]
 excerpt: "Cambodia's Special Economic Zones and Qualified Investment Projects offer compelling tax holidays and duty exemptions for foreign investors. Here's what you need to know about eligibility and application."
 author: "EP Partners Team"
 readTime: 9

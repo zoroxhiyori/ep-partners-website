@@ -11,7 +11,7 @@ sub_services:
   - "Non-disclosure & IP agreements"
   - "Regulatory licensing applications"
   - "Labor dispute support"
-  - "Legal translation services (EN/KH/ZH)"
+  - "Legal translation services (EN/KH/CH)"
 ---
 
 Operating a business in Cambodia generates a constant stream of legal documents, compliance obligations, and contractual relationships. EP Partners provides practical legal support services that help businesses manage their legal exposure efficiently — without the overhead of maintaining a full in-house legal team.

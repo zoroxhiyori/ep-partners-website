@@ -1,7 +1,7 @@
 ---
 name: "Te Lyhav"
 role: "Founder & Managing Director"
-languages: ["EN", "KH", "ZH"]
+languages: ["EN", "KH", "CH"]
 email: "lyhav@ep-partners.com"
 order: 1
 ---

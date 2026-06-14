@@ -2,7 +2,7 @@
 title: "New GDT Regulations on Transfer Pricing in Cambodia"
 date: "2025-02-20"
 category: "Tax & Accounting"
-languages: ["EN", "ZH"]
+languages: ["EN", "CH"]
 excerpt: "Cambodia's General Department of Taxation has introduced comprehensive transfer pricing rules under Prakas No. 986, requiring multinational groups to maintain detailed arm's length pricing documentation."
 author: "EP Partners Team"
 readTime: 10
