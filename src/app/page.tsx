@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import Footer from "@/components/Footer";
 
 const services = [
@@ -41,15 +42,12 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative aspect-[5/6] bg-[#162444] overflow-hidden hidden lg:block rounded-lg">
-            <span className="absolute top-7 right-7 w-14 h-px bg-[#c9a84c]/50" />
-            <span className="absolute top-7 right-7 h-14 w-px bg-[#c9a84c]/50" />
-            <span className="absolute bottom-7 left-7 w-14 h-px bg-[#c9a84c]/50" />
-            <span className="absolute bottom-7 left-7 h-14 w-px bg-[#c9a84c]/50" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-[13rem] font-bold text-white/[0.035] select-none leading-none">EP</span>
-            </div>
-            <p className="absolute bottom-8 right-8 text-xs tracking-[0.22em] uppercase text-white/25">Photo</p>
+          <div className="relative hidden sm:block lg:aspect-[5/6] overflow-hidden rounded-lg">
+            <img
+              src="/images/hero-photo.jpg.jpg"
+              alt="EP Partners Professional Services"
+              style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
+            />
           </div>
         </div>
       </section>
