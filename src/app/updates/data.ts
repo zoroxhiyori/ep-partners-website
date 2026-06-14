@@ -1,5 +1,5 @@
 export type Category = "Tax & Accounting" | "Legal & Compliance" | "Business & Investment";
-export type Language = "EN" | "KH" | "ZH";
+export type Language = "EN" | "KH" | "CH";
 
 export interface Article {
   slug: string;
@@ -25,7 +25,7 @@ export const articles: Article[] = [
     excerpt:
       "A comprehensive overview of all key tax filing deadlines for businesses in Cambodia in 2025, including monthly obligations, annual returns, and critical GDT submission dates.",
     category: "Tax & Accounting",
-    languages: ["EN", "KH", "ZH"],
+    languages: ["EN", "KH", "CH"],
     date: "January 15, 2025",
     readTime: 8,
     content: `
@@ -88,7 +88,7 @@ export const articles: Article[] = [
     excerpt:
       "Cambodia's General Department of Taxation has introduced comprehensive transfer pricing rules under Prakas No. 986, requiring multinational groups to maintain detailed arm's length pricing documentation.",
     category: "Tax & Accounting",
-    languages: ["EN", "ZH"],
+    languages: ["EN", "CH"],
     date: "February 20, 2025",
     readTime: 10,
     content: `
@@ -196,7 +196,7 @@ export const articles: Article[] = [
     excerpt:
       "Cambodia's Special Economic Zones offer some of Southeast Asia's most competitive investment incentives, including multi-year tax holidays, duty exemptions on production inputs, and streamlined CDC approval processes.",
     category: "Business & Investment",
-    languages: ["EN", "KH", "ZH"],
+    languages: ["EN", "KH", "CH"],
     date: "April 5, 2025",
     readTime: 7,
     content: `
@@ -310,7 +310,7 @@ export const articles: Article[] = [
     excerpt:
       "Cambodia's M&A market showed resilience in Q1 2025 with notable deal flow in financial services, real estate, and manufacturing. Chinese, Japanese, and ASEAN regional investors remained the most active acquirers.",
     category: "Business & Investment",
-    languages: ["EN", "ZH"],
+    languages: ["EN", "CH"],
     date: "June 2, 2025",
     readTime: 6,
     content: `

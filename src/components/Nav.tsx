@@ -13,7 +13,7 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const languages = ["EN", "KH", "ZH"];
+const languages = ["EN", "KH", "CH"];
 
 export default function Nav() {
   const [activeLang, setActiveLang] = useState("EN");

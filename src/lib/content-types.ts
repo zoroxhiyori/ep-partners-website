@@ -1,7 +1,7 @@
 // Client-safe types and constants — no Node.js imports
 
 export type Category = "Tax & Accounting" | "Legal & Compliance" | "Business & Investment";
-export type Language = "EN" | "KH" | "ZH";
+export type Language = "EN" | "KH" | "CH";
 
 export const categoryMeta: Record<Category, { bg: string; text: string }> = {
   "Tax & Accounting": { bg: "#ECFDF5", text: "#059669" },

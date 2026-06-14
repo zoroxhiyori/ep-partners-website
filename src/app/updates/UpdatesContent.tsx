@@ -10,7 +10,7 @@ const categories: ["All", ...Category[]] = [
   "Legal & Compliance",
   "Business & Investment",
 ];
-const languages: Language[] = ["EN", "KH", "ZH"];
+const languages: Language[] = ["EN", "KH", "CH"];
 
 function FacebookIcon() {
   return (
@@ -278,7 +278,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
 
                 <div className="flex items-center justify-center gap-3 text-xs">
                   <span className="text-white/50">Preferred language:</span>
-                  {(["EN", "KH", "ZH"] as Language[]).map((lang) => (
+                  {(["EN", "KH", "CH"] as Language[]).map((lang) => (
                     <button
                       key={lang}
                       onClick={() => setLangPref(lang)}
