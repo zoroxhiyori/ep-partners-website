@@ -6,12 +6,17 @@ icon_bg: "#ECFDF5"
 icon_color: "#059669"
 tagline: "Accurate, timely financial records aligned with CIFRS and local GDT requirements."
 sub_services:
-  - "Monthly bookkeeping & reconciliation"
-  - "Payroll processing & NSSF reporting"
-  - "Management accounts preparation"
-  - "CIFRS / IFRS financial statements"
-  - "Chart of accounts setup"
-  - "Cloud accounting system implementation"
+  - "Monthly Bookkeeping & General Ledger"
+  - "Financial Statement Preparation (BS, P&L, CF)"
+  - "Bank Reconciliation"
+  - "Accounts Payable & Receivable Management"
+  - "Payroll Processing & Management"
+  - "NSSF Monthly Contribution Filing"
+  - "Fixed Asset Register & Depreciation Schedule"
+  - "Management Reporting & Dashboard"
+  - "QuickBooks / Xero / Wave Setup & Training"
+  - "Chart of Accounts Design & Setup"
+  - "Accounting System Implementation"
 ---
 
 Reliable financial records are the backbone of every successful business. EP Partners provides outsourced accounting and bookkeeping services that give management timely, accurate visibility into business performance while maintaining full compliance with Cambodia's Cambodian International Financial Reporting Standards (CIFRS).

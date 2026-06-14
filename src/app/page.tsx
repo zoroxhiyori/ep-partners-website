@@ -7,6 +7,10 @@ const services = [
   { number: "02", title: "Tax Compliance", description: "Deep-dive planning to optimize your tax liabilities and ensure full regulatory compliance across all obligations." },
   { number: "03", title: "Accounting & Bookkeeping", description: "Automated, precise, and entirely headache-free management of your daily transactions and financial data flow." },
   { number: "04", title: "Audit & Assurance", description: "Independent verification and assurance services that build stakeholder confidence and ensure financial integrity." },
+  { number: "05", title: "Financial & Investment Advisory", description: "Translate financial complexity into clear investment decisions with expert modelling and IFRS advisory." },
+  { number: "06", title: "Business Advisory & Consulting", description: "Strategic guidance to streamline operations, sharpen focus, and position your business for scalable growth." },
+  { number: "07", title: "M&A & Due Diligence", description: "Navigate acquisitions and mergers with confidence through rigorous financial and commercial analysis." },
+  { number: "08", title: "Legal & Compliance", description: "Protect your business with proactive legal guidance and comprehensive corporate compliance management." },
 ];
 
 const advantages = [
@@ -78,7 +82,7 @@ export default function Home() {
               A suite of services designed to streamline your finances, translating complexity into actionable clarity.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-6">
             {services.map(({ number, title, description }) => (
               <div key={number} className="bg-white border border-[#e5e7eb] rounded-lg p-6 sm:p-8 flex flex-col gap-4 hover:border-[#c9a84c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
                 <span className="text-3xl font-bold text-[#c9a84c]/50 leading-none">{number}</span>

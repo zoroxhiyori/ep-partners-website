@@ -1,19 +1,23 @@
 ---
 number: "07"
-title: "Audit & Assurance"
+title: "M&A & Due Diligence"
 order: 7
-icon_bg: "#F0FDF4"
-icon_color: "#16A34A"
-tagline: "Independent financial statement audits and internal control reviews in line with ISA."
+icon_bg: "#FDF4FF"
+icon_color: "#9333EA"
+tagline: "Navigate acquisitions and mergers with confidence through rigorous financial and commercial analysis."
 sub_services:
-  - "Statutory financial statement audit"
-  - "Internal audit & controls review"
-  - "Pre-audit readiness assessments"
-  - "IFRS conversion assurance"
-  - "Due diligence financial reviews"
-  - "Agreed-upon procedures engagements"
+  - "Buy-Side Financial Due Diligence"
+  - "Sell-Side / Vendor Due Diligence"
+  - "Business Valuation (DCF, Comparables, NAV)"
+  - "Deal Structuring & Tax Advisory"
+  - "Letter of Intent (LOI) & Term Sheet Review"
+  - "Post-Merger Financial Integration"
+  - "Joint Venture Structuring & Advisory"
+  - "Investment Information Memorandum (IM)"
+  - "Share Purchase Agreement (SPA) Review"
+  - "Capital Raising Advisory"
 ---
 
-Reliable, independently verified financial statements are essential for accessing credit, attracting investors, satisfying regulatory requirements, and building stakeholder confidence. EP Partners coordinates statutory audit engagements conducted in accordance with International Standards on Auditing (ISA), delivered by qualified registered auditors.
+Acquisitions and mergers in Cambodia carry unique risks that require expert local knowledge and rigorous analysis. EP Partners provides comprehensive M&A advisory and due diligence services that give buyers and sellers the clarity they need to transact with confidence.
 
-Our pre-audit readiness service helps clients identify and address potential issues before the formal audit begins — reducing the risk of qualified opinions and ensuring a smoother, faster audit process.
+From financial and commercial due diligence through deal structuring, valuation, and post-acquisition integration planning, our team supports every stage of the transaction lifecycle — ensuring no material risk goes unidentified.

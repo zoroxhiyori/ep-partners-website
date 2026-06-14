@@ -1,19 +1,25 @@
 ---
 number: "05"
-title: "Work Permits & Visas"
+title: "Financial & Investment Advisory"
 order: 5
-icon_bg: "#FFF1F2"
-icon_color: "#E11D48"
-tagline: "Seamless immigration compliance for expatriate employees and business travelers."
+icon_bg: "#FFFBEB"
+icon_color: "#B45309"
+tagline: "Translate financial complexity into clear investment decisions with expert modelling and IFRS advisory."
 sub_services:
-  - "E-visa & business visa applications"
-  - "Work permit applications & renewals"
-  - "Employment Card (EC) processing"
-  - "Quota applications for foreign workers"
-  - "Dependent visas for family members"
-  - "Immigration compliance audits"
+  - "IFRS Gap Analysis & Assessment"
+  - "IFRS Transition Planning & Roadmap"
+  - "Accounting Policy Drafting & Review"
+  - "IFRS 9 Financial Instruments Advisory"
+  - "IFRS 15 Revenue Recognition Advisory"
+  - "IFRS 16 Leases Implementation"
+  - "Financial Statement Restatement"
+  - "Financial Projections & Modelling (3-5 year)"
+  - "Investment Feasibility Study"
+  - "Treasury & Cash Flow Management"
+  - "Investor-Ready Financial Reporting"
+  - "Virtual CFO Service"
 ---
 
-Hiring expatriate staff in Cambodia involves navigating multiple government agencies — the Ministry of Labor, Ministry of Interior, and Immigration Department. EP Partners manages the full immigration lifecycle for your international workforce, from initial visa application through annual work permit renewals.
+Cambodia offers compelling opportunities for foreign investors, but the regulatory environment and deal structuring norms differ significantly from those in more developed markets. EP Partners provides hands-on financial and investment advisory that helps clients make informed decisions at every stage of their investment journey.
 
-We track renewal deadlines proactively so your employees never work on expired permits, and we provide immigration compliance audits for businesses that want to verify their existing workforce's status is fully current.
+From IFRS gap analysis and transition planning through financial modelling, feasibility studies, and Virtual CFO services, our team brings both technical expertise and on-the-ground market knowledge to every engagement.

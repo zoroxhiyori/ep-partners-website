@@ -1,19 +1,22 @@
 ---
 number: "06"
-title: "Investment & Business Advisory"
+title: "Business Advisory & Consulting"
 order: 6
-icon_bg: "#FFFBEB"
-icon_color: "#B45309"
-tagline: "Strategic guidance for market entry, expansion, and cross-border investment in Cambodia."
+icon_bg: "#EFF6FF"
+icon_color: "#2563EB"
+tagline: "Strategic guidance to streamline operations, sharpen focus, and position your business for scalable growth."
 sub_services:
-  - "Market entry strategy & feasibility"
-  - "QIP application & CDC coordination"
-  - "M&A due diligence & deal structuring"
-  - "Joint venture agreements"
-  - "SEZ location & incentive analysis"
-  - "Business valuation services"
+  - "Business Setup & Market Entry Advisory"
+  - "Business Plan Development & Writing"
+  - "Budgeting & Financial Forecasting"
+  - "Working Capital & Cash Flow Advisory"
+  - "Financial Restructuring Advisory"
+  - "KPI Framework & Performance Dashboard"
+  - "Business Valuation"
+  - "Strategic Planning Support"
+  - "Cost Reduction & Efficiency Review"
 ---
 
-Cambodia offers compelling opportunities for foreign investors, but the regulatory environment and deal structuring norms differ significantly from those in more developed markets. EP Partners provides hands-on advisory support that helps clients make informed decisions at every stage of their investment journey.
+Growing a business in Cambodia requires more than compliance — it requires a clear strategic direction and efficient operations. EP Partners provides business advisory and consulting services that help management teams identify opportunities, remove bottlenecks, and build the foundations for sustainable growth.
 
-From initial market entry feasibility through Qualified Investment Project (QIP) applications, M&A due diligence, and joint venture structuring, our team brings both technical expertise and on-the-ground market knowledge to every engagement.
+From organisational design and process improvement to strategic planning workshops and KPI frameworks, our advisors work alongside your leadership team to translate ambition into executable plans.
