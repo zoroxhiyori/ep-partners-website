@@ -29,7 +29,7 @@ export default function AboutPage() {
           </div>
           <div className="relative w-full overflow-hidden rounded-xl" style={{ height: '500px' }}>
             <img
-              src="/images/about-hero.jpg.png"
+              src="/images/about-hero.jpg.png?v=2"
               alt="EP Partners Team"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px', display: 'block' }}
             />
