@@ -27,11 +27,12 @@ export default function AboutPage() {
               businesses the financial clarity they deserve.
             </p>
           </div>
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/7] bg-white/[0.04] border-t border-x border-white/10 overflow-hidden rounded-t-lg">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-[10rem] lg:text-[16rem] font-bold text-white/[0.025] select-none leading-none tracking-tighter">EP</span>
-            </div>
-            <p className="absolute bottom-5 right-6 text-xs tracking-[0.22em] uppercase text-white/20">Photo</p>
+          <div className="relative w-full overflow-hidden rounded-xl" style={{ height: '500px' }}>
+            <img
+              src="/images/about-hero.jpg.png"
+              alt="EP Partners Team"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px', display: 'block' }}
+            />
           </div>
         </div>
       </section>

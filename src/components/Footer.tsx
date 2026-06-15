@@ -31,23 +31,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
 
           {/* Brand column */}
-          <div className="flex flex-col gap-5 sm:col-span-2 lg:col-span-1">
-            <div style={{ width: "fit-content" }}>
-              <img
-                src="/images/EP_partner_logo.png"
-                alt="EP Partners"
-                className="h-[72px] sm:h-[84px] lg:h-24 w-auto object-contain"
-                style={{ maxWidth: "240px", marginBottom: "16px" }}
-              />
-            </div>
-            <p className="text-sm text-[#445571] leading-relaxed max-w-xs">
+          <div className="flex flex-col items-start gap-5 sm:col-span-2 lg:col-span-1 text-left" style={{ marginLeft: 0, paddingLeft: 0 }}>
+            <img
+              src="/images/EP_partner_logo.png"
+              alt="EP Partners"
+              style={{ height: '64px', width: 'auto', marginLeft: '0', paddingLeft: '0', display: 'block' }}
+            />
+            <p className="text-sm text-[#445571] leading-relaxed max-w-xs text-left pl-2">
               EP Partners — Professional Services Cambodia
             </p>
-            <p className="text-sm text-[#445571]/70 leading-relaxed max-w-xs">
+            <p className="text-sm text-[#445571]/70 leading-relaxed max-w-xs text-left pl-2">
               Your trusted accounting, tax, and advisory partner in Cambodia.
               We translate complex numbers into actionable clarity for growing businesses.
             </p>
-            <span className="w-10 h-0.5 bg-[#c9a84c] block" />
+            <span className="w-10 h-0.5 bg-[#c9a84c] block ml-2" />
           </div>
 
           {/* Services column */}
