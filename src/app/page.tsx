@@ -123,15 +123,12 @@ export default function Home() {
       <section className="bg-white py-16 sm:py-20 lg:py-28">
         <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative aspect-[4/3] bg-[#f4f5f7] overflow-hidden rounded-lg border border-[#e5e7eb]">
-              <span className="absolute top-7 left-7 w-14 h-px bg-[#c9a84c]/50" />
-              <span className="absolute top-7 left-7 h-14 w-px bg-[#c9a84c]/50" />
-              <span className="absolute bottom-7 right-7 w-14 h-px bg-[#c9a84c]/50" />
-              <span className="absolute bottom-7 right-7 h-14 w-px bg-[#c9a84c]/50" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-[11rem] font-bold text-[#0f1f3d]/[0.05] select-none leading-none">EP</span>
-              </div>
-              <p className="absolute bottom-6 left-6 text-xs tracking-[0.22em] uppercase text-[#445571]/40">Photo</p>
+            <div style={{width:'100%', height:'500px', position:'relative', overflow:'hidden', borderRadius:'12px'}}>
+              <img
+                src="/images/about-photo.jpg.png"
+                alt="EP Partners Team"
+                style={{width:'100%', height:'100%', objectFit:'cover', borderRadius:'12px', display:'block'}}
+              />
             </div>
             <div className="flex flex-col gap-6">
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c]">Who We Are</p>
