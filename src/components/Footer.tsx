@@ -18,9 +18,8 @@ const companyLinks = [
 
 const contactItems = [
   { label: "info@eppartnerskh.com", href: "mailto:info@eppartnerskh.com" },
-  { label: "+855 10 558 823", href: "https://wa.me/85510558823" },
-  { label: "@telyhav (Telegram)", href: "https://t.me/telyhav" },
-  { label: "N105 Street 598, Toulkouk\nPhnom Penh, Cambodia", href: "https://maps.google.com/?q=Street+598+Toulkouk+Phnom+Penh" },
+  { label: "+855 10 339 494", href: "tel:+85510339494" },
+  { label: "Time Square 3, Street 335, BK1\nToulkouk, Phnom Penh, Cambodia", href: "https://maps.google.com/?q=Time+Square+3+Street+335+Toulkouk+Phnom+Penh" },
 ];
 
 const linkClass = "text-sm !text-[#445571] hover:!text-[#c9a84c] transition-colors duration-200 block";

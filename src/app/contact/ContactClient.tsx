@@ -5,11 +5,12 @@ import Footer from "@/components/Footer";
 import type { FAQItem } from "@/lib/content-types";
 
 const channels = [
-  { platform: "Telegram", handle: "@telyhav", href: "https://t.me/telyhav", detail: "Fastest response" },
-  { platform: "WhatsApp", handle: "+855 10 558 823", href: "https://wa.me/85510558823", detail: "Call or message" },
-  { platform: "WeChat", handle: "EP_Partners_KH", href: "#", detail: "For Mandarin-speaking clients" },
-  { platform: "Email", handle: "telyhav@eppartnerskh.com", href: "mailto:telyhav@eppartnerskh.com", detail: "Response within 1 business day" },
-  { platform: "Office", handle: "N105 Street 598, Toulkouk, Phnom Penh", href: "https://maps.google.com/?q=Street+598+Toulkouk+Phnom+Penh", detail: "By appointment" },
+  { platform: "Email", handle: "info@eppartnerskh.com", href: "mailto:info@eppartnerskh.com", detail: "Response within 1 business day" },
+  { platform: "Phone", handle: "+855 10 339 494", href: "tel:+85510339494", detail: "Call us directly" },
+  { platform: "Telegram", handle: "(Coming Soon)", href: "#", detail: "Fastest response" },
+  { platform: "WhatsApp", handle: "(Coming Soon)", href: "#", detail: "Call or message" },
+  { platform: "WeChat", handle: "(Coming Soon)", href: "#", detail: "For Mandarin-speaking clients" },
+  { platform: "Office", handle: "Time Square 3, Street 335, BK1, Toulkouk, Phnom Penh, Cambodia", href: "https://maps.google.com/?q=Time+Square+3+Street+335+Toulkouk+Phnom+Penh", detail: "By appointment" },
 ];
 
 const serviceOptions = [
