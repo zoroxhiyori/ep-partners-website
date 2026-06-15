@@ -1,6 +1,4 @@
 import Footer from "@/components/Footer";
-import Link from "next/link";
-import { getTeamMembers } from "@/lib/content";
 
 const values = [
   { number: "01", title: "Radical Precision", description: "We treat every decimal as a critical detail, ensuring your financial foundation is flawless and future-proof." },
@@ -10,7 +8,6 @@ const values = [
 ];
 
 export default function AboutPage() {
-  const team = getTeamMembers();
   return (
     <main className="flex flex-col">
 
@@ -60,37 +57,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. TEAM — light gray */}
-      <section className="bg-[#f4f5f7] py-16 sm:py-20 lg:py-28">
-        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="mb-12 lg:mb-16">
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c] mb-4">Our People</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0f1f3d] leading-tight">The People Behind<br />the Precision.</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {team.map(({ name, role }) => (
-              <div key={name} className="flex flex-col gap-4 group">
-                <div className="relative aspect-[3/4] bg-white border border-[#e5e7eb] rounded-lg overflow-hidden hover:border-[#c9a84c] hover:shadow-md transition-all duration-300">
-                  <span className="absolute top-4 right-4 w-8 h-px bg-[#c9a84c]/40 group-hover:w-12 transition-all duration-300" />
-                  <span className="absolute top-4 right-4 h-8 w-px bg-[#c9a84c]/40 group-hover:h-12 transition-all duration-300" />
-                  <div className="absolute inset-0 flex items-end p-5">
-                    <span className="text-6xl font-bold text-[#0f1f3d]/[0.06] leading-none select-none">
-                      {name.split(" ")[0][0]}{name.split(" ")[1][0]}
-                    </span>
-                  </div>
-                  <p className="absolute bottom-4 right-5 text-[9px] tracking-[0.2em] uppercase text-[#445571]/30">Photo</p>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-lg font-semibold text-[#0f1f3d] group-hover:text-[#c9a84c] transition-colors duration-300">{name}</h3>
-                  <p className="text-xs tracking-wide uppercase text-[#445571]">{role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. VALUES — navy */}
+      {/* 3. VALUES — navy */}
       <section className="bg-[#0f1f3d] py-16 sm:py-20 lg:py-28">
         <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="mb-12 lg:mb-16">
