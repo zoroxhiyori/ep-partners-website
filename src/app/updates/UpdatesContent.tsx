@@ -52,10 +52,7 @@ function openShare(href: string) {
 
 export default function UpdatesContent({ updates }: { updates: Update[] }) {
   const [activeCategory, setActiveCategory] = useState<"All" | Category>("All");
-  const [activeLang, setActiveLang] = useState<Language | "">("");
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-  const [langPref, setLangPref] = useState<Language>("EN");
+  const [activeLang, setActiveLang] = useState<Language | "">();
 
   const filtered = updates.filter((u) => {
     const catMatch = activeCategory === "All" || u.category === activeCategory;
@@ -238,62 +235,6 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
         </div>
       </section>
 
-      {/* ── NEWSLETTER (navy) ── */}
-      <section className="bg-[#0f1f3d]">
-        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-24">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Stay Informed</h2>
-            <p className="text-white/70 mb-8 leading-relaxed">
-              Get the latest regulatory updates, tax changes, and business insights delivered directly to your inbox.
-            </p>
-
-            {subscribed ? (
-              <div className="inline-flex items-center gap-2 bg-[#c9a84c]/20 border border-[#c9a84c]/40 rounded-lg px-6 py-4">
-                <svg viewBox="0 0 20 20" fill="#c9a84c" width="18" height="18">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-[#c9a84c] font-semibold">You&apos;re subscribed — thank you!</span>
-              </div>
-            ) : (
-              <>
-                <form
-                  onSubmit={(e) => { e.preventDefault(); if (email) setSubscribed(true); }}
-                  className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4"
-                >
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    required
-                    className="flex-1 px-4 py-3 rounded-md text-sm bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#c9a84c]"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-[#c9a84c] text-[#0f1f3d] font-semibold text-sm px-6 py-3 rounded-md hover:bg-white transition-colors duration-200 whitespace-nowrap"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-
-                <div className="flex items-center justify-center gap-3 text-xs">
-                  <span className="text-white/50">Preferred language:</span>
-                  {(["EN", "KH", "CH"] as Language[]).map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => setLangPref(lang)}
-                      className="transition-colors duration-150 font-semibold"
-                      style={{ color: langPref === lang ? "#c9a84c" : "rgba(255,255,255,0.4)" }}
-                    >
-                      {lang}
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

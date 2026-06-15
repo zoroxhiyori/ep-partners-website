@@ -92,6 +92,102 @@ const solutions = [
     ],
     accent: "ASEAN",
   },
+  {
+    number: "07",
+    title: "Real Estate & Construction",
+    tagline: "End-to-end compliance for developers and investors.",
+    description:
+      "From property developers and construction firms to foreign real estate investors, we provide specialized tax, accounting and legal compliance tailored to Cambodia's dynamic property market.",
+    features: [
+      "Property transaction tax & stamp duty advisory",
+      "Construction company accounting & payroll",
+      "Foreign ownership structure & compliance",
+      "Revenue recognition for long-term contracts",
+      "CDC & MLMUPC registration support",
+      "Real estate investment tax planning",
+    ],
+    accent: "PROPERTY & DEVELOPMENT",
+  },
+  {
+    number: "08",
+    title: "Banking & Financial Services",
+    tagline: "Specialized compliance for regulated entities.",
+    description:
+      "NBC-licensed banks, MFIs, insurance companies and fintech firms face unique regulatory requirements. Our team delivers specialized accounting, audit and compliance services for Cambodia's financial sector.",
+    features: [
+      "NBC regulatory compliance & reporting",
+      "MFI accounting & financial statements",
+      "Insurance company audit & compliance",
+      "Fintech tax structuring & advisory",
+      "IFRS 9 implementation for financial institutions",
+      "AML/CFT compliance framework",
+    ],
+    accent: "FINANCIAL INSTITUTIONS",
+  },
+  {
+    number: "09",
+    title: "E-Commerce & Technology",
+    tagline: "Tax and compliance for the digital economy.",
+    description:
+      "From online marketplaces and SaaS platforms to mobile apps and digital agencies, we help tech and e-commerce businesses navigate Cambodia's evolving digital tax landscape.",
+    features: [
+      "Digital services VAT compliance",
+      "Cross-border transaction tax advisory",
+      "Technology company accounting & audit",
+      "Stock option & equity plan advisory",
+      "R&D cost capitalization under IFRS",
+      "E-commerce platform compliance",
+    ],
+    accent: "DIGITAL BUSINESS",
+  },
+  {
+    number: "10",
+    title: "Healthcare & Clinics",
+    tagline: "Professional services for healthcare providers.",
+    description:
+      "Clinics, hospitals, pharmaceutical distributors and medical device companies trust EP Partners for specialized healthcare accounting, tax compliance and regulatory advisory in Cambodia.",
+    features: [
+      "Healthcare entity registration & licensing",
+      "Medical practice accounting & bookkeeping",
+      "Pharmaceutical import duty & VAT advisory",
+      "Healthcare-specific payroll & NSSF",
+      "Grant accounting for health NGOs",
+      "MOH regulatory compliance support",
+    ],
+    accent: "HEALTHCARE",
+  },
+  {
+    number: "11",
+    title: "Education & Schools",
+    tagline: "Financial clarity for educators and institutions.",
+    description:
+      "International schools, universities, training centers and EdTech companies benefit from EP Partners' specialized education sector accounting, tax and compliance services.",
+    features: [
+      "School registration & MoEYS compliance",
+      "Tuition fee revenue recognition (IFRS 15)",
+      "Education entity tax structuring",
+      "Scholarship & grant fund accounting",
+      "International school audit & assurance",
+      "EdTech platform tax advisory",
+    ],
+    accent: "EDUCATION",
+  },
+  {
+    number: "12",
+    title: "Agriculture & Agribusiness",
+    tagline: "Supporting Cambodia's agricultural sector.",
+    description:
+      "From rice exporters and plantation companies to agri-processors and food manufacturers, EP Partners delivers specialized accounting, tax incentives advisory and compliance for Cambodia's agriculture sector.",
+    features: [
+      "Agricultural tax incentives & exemptions",
+      "Export documentation & customs compliance",
+      "Plantation & farm accounting",
+      "Agri-processing company audit",
+      "CDC QIP application for agribusiness",
+      "Food safety & export certification support",
+    ],
+    accent: "AGRICULTURE",
+  },
 ];
 
 const differentiators = [
@@ -128,7 +224,7 @@ export default function SolutionsPage() {
               Built for Your<br />Industry.
             </h1>
             <p className="mt-6 text-base leading-relaxed text-white/65 max-w-md">
-              Six tailored solution sets — each designed around the specific
+              Twelve tailored solution sets — each designed around the specific
               regulatory, financial, and operational realities of your sector
               in Cambodia.
             </p>
@@ -142,14 +238,14 @@ export default function SolutionsPage() {
           <div className="mb-12 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c] mb-4">Who We Serve</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#0f1f3d] leading-tight">Six Verticals.<br />One Team.</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#0f1f3d] leading-tight">Twelve Verticals.<br />One Team.</h2>
             </div>
             <p className="text-base text-[#445571] max-w-xs lg:text-right leading-relaxed">
               Deep sector knowledge delivered through a single, coordinated point of contact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {solutions.map(({ number, title, tagline, description, features, accent }) => (
               <div
                 key={number}
