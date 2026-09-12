@@ -10,8 +10,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "EP Partners — Professional Services Cambodia",
-  description: "Your trusted accounting, tax, and advisory partner in Cambodia.",
+  metadataBase: new URL("https://eppartnerskh.com"),
+  title: {
+    default: "EP Partners Co., Ltd — Professional Services Cambodia",
+    template: "%s | EP Partners",
+  },
+  description:
+    "Accounting, tax, audit and advisory services in Phnom Penh, Cambodia. Serving local and international clients in English, Khmer and Chinese.",
+  openGraph: {
+    title: "EP Partners Co., Ltd",
+    description:
+      "Professional accounting, tax and advisory services in Cambodia.",
+    url: "https://eppartnerskh.com",
+    siteName: "EP Partners",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EP Partners Co., Ltd",
+    description:
+      "Professional accounting, tax and advisory services in Cambodia.",
+  },
 };
 
 export default function RootLayout({
