@@ -14,3 +14,14 @@ export function isLang(value: unknown): value is Lang {
 export function parseLang(value: string | undefined): Lang {
   return isLang(value) ? value : "en";
 }
+
+/**
+ * Wide letter-spacing for small uppercase labels. It suits Latin capitals but
+ * pulls Khmer glyph clusters apart, so Khmer gets normal spacing.
+ *
+ *   <p className={`text-xs uppercase ${labelTracking(lang)} ...`}>
+ *   <h4 className={`... ${labelTracking(lang, "tracking-widest")} ...`}>
+ */
+export function labelTracking(lang: Lang, tracking = "tracking-[0.25em]"): string {
+  return lang === "kh" ? "" : tracking;
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useLanguage } from "@/lib/i18n";
+import { labelTracking, useLanguage } from "@/lib/i18n";
 
 const serviceLinks = [
   { label: "Business Registration", href: "/services" },
@@ -29,8 +29,7 @@ const linkClass = "text-sm !text-[#445571] hover:!text-[#c9a84c] transition-colo
 
 export default function Footer() {
   const { lang, t } = useLanguage();
-  // Wide tracking suits Latin capitals but pulls Khmer glyph clusters apart.
-  const tracking = lang === "kh" ? "" : "tracking-widest";
+  const tracking = labelTracking(lang, "tracking-widest");
 
   return (
     <footer className="bg-white text-[#0f1f3d]" style={{ borderTop: "1px solid #e5e7eb" }}>

@@ -8,6 +8,7 @@ import zh from "@/messages/zh.json";
 import { LANG_COOKIE, type Lang } from "@/lib/i18n-config";
 
 export type { Lang } from "@/lib/i18n-config";
+export { labelTracking } from "@/lib/i18n-config";
 
 type Dictionary = Record<string, string>;
 
