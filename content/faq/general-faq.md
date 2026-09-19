@@ -4,7 +4,7 @@ category: "General"
 
 ## How long does it take to register a company in Cambodia?
 
-A standard company registration with the Ministry of Commerce typically takes 7–14 business days, provided all required documents are prepared and apostilled where necessary. After MOC registration, additional steps including tax registration with the GDT and NSSF enrollment add approximately another 5–10 business days. EP Partners manages this entire process for clients and typically completes full setup within 3–4 weeks.
+A standard company registration typically takes 3 to 4 weeks at normal processing speed, provided all required documents are prepared and apostilled where necessary. This covers registration with the Ministry of Commerce, tax registration with the GDT and NSSF enrollment. EP Partners manages this entire process for clients from start to finish.
 
 ## What is the minimum capital requirement for a foreign-owned company in Cambodia?
 
