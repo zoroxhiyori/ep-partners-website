@@ -10,12 +10,12 @@
 @theme inline {
   --color-navy: var(--navy);
   --color-gold: var(--gold);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-inter), var(--font-khmer), sans-serif;
 }
 
 @layer base {
   body {
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-inter), var(--font-khmer), sans-serif;
     background: #ffffff;
     color: #0f1f3d;
   }

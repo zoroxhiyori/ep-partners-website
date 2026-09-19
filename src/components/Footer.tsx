@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/lib/i18n";
 
 const serviceLinks = [
   { label: "Business Registration", href: "/services" },
@@ -25,6 +28,10 @@ const contactItems = [
 const linkClass = "text-sm !text-[#445571] hover:!text-[#c9a84c] transition-colors duration-200 block";
 
 export default function Footer() {
+  const { lang, t } = useLanguage();
+  // Wide tracking suits Latin capitals but pulls Khmer glyph clusters apart.
+  const tracking = lang === "kh" ? "" : "tracking-widest";
+
   return (
     <footer className="bg-white text-[#0f1f3d]" style={{ borderTop: "1px solid #e5e7eb" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
@@ -38,19 +45,18 @@ export default function Footer() {
               style={{ height: '64px', width: 'auto', marginLeft: '0', paddingLeft: '0', display: 'block' }}
             />
             <p className="text-sm text-[#445571] leading-relaxed max-w-xs text-left pl-2">
-              EP Partners — Professional Services Cambodia
+              {t("footer.tagline")}
             </p>
             <p className="text-sm text-[#445571]/70 leading-relaxed max-w-xs text-left pl-2">
-              Your trusted accounting, tax, and advisory partner in Cambodia.
-              We translate complex numbers into actionable clarity for growing businesses.
+              {t("footer.description")}
             </p>
             <span className="w-10 h-0.5 bg-[#c9a84c] block ml-2" />
           </div>
 
           {/* Services column */}
           <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#0f1f3d]">
-              Services
+            <h4 className={`text-xs font-bold uppercase ${tracking} text-[#0f1f3d]`}>
+              {t("footer.col_services")}
             </h4>
             <ul className="flex flex-col gap-2.5">
               {serviceLinks.map(({ label, href }) => (
@@ -63,8 +69,8 @@ export default function Footer() {
 
           {/* Company column */}
           <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#0f1f3d]">
-              Company
+            <h4 className={`text-xs font-bold uppercase ${tracking} text-[#0f1f3d]`}>
+              {t("footer.col_company")}
             </h4>
             <ul className="flex flex-col gap-2.5">
               {companyLinks.map(({ label, href }) => (
@@ -77,8 +83,8 @@ export default function Footer() {
 
           {/* Contact column */}
           <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#0f1f3d]">
-              Contact
+            <h4 className={`text-xs font-bold uppercase ${tracking} text-[#0f1f3d]`}>
+              {t("footer.col_contact")}
             </h4>
             <ul className="flex flex-col gap-2.5">
               {contactItems.map(({ label, href }) => (
@@ -100,8 +106,8 @@ export default function Footer() {
 
       <div style={{ borderTop: "1px solid #e5e7eb" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs uppercase tracking-widest text-[#445571]/50">
-            © 2012 EP Partners. All rights reserved.
+          <p className={`text-xs uppercase ${tracking} text-[#445571]/50`}>
+            {t("footer.copyright")}
           </p>
           <p className="text-xs text-[#445571]/50">
             Phnom Penh, Cambodia

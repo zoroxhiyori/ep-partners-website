@@ -2,21 +2,26 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage, type Lang } from "@/lib/i18n";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Updates", href: "/updates" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  { key: "nav.home", href: "/" },
+  { key: "nav.about", href: "/about" },
+  { key: "nav.services", href: "/services" },
+  { key: "nav.solutions", href: "/solutions" },
+  { key: "nav.updates", href: "/updates" },
+  { key: "nav.careers", href: "/careers" },
+  { key: "nav.contact", href: "/contact" },
 ];
 
-const languages = ["EN", "KH", "CH"];
+const languages: { code: Lang; label: string }[] = [
+  { code: "en", label: "EN" },
+  { code: "kh", label: "KH" },
+  { code: "zh", label: "CH" },
+];
 
 export default function Nav() {
-  const [activeLang, setActiveLang] = useState("EN");
+  const { lang: activeLang, setLang, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -33,14 +38,14 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav links */}
-        <ul className="hidden lg:flex items-center gap-10">
-          {navLinks.map(({ label, href }) => (
-            <li key={label}>
+        <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
+          {navLinks.map(({ key, href }) => (
+            <li key={key}>
               <Link
                 href={href}
-                className="relative inline-block text-sm font-medium pb-1 group text-[#0f1f3d] hover:text-[#c9a84c] transition-colors duration-200"
+                className="relative inline-block whitespace-nowrap text-sm font-medium pb-1 group text-[#0f1f3d] hover:text-[#c9a84c] transition-colors duration-200"
               >
-                {label}
+                {t(key)}
                 <span className="absolute bottom-0 left-0 h-px w-0 bg-[#c9a84c] transition-all duration-300 ease-out group-hover:w-full" />
               </Link>
             </li>
@@ -52,21 +57,21 @@ export default function Nav() {
 
           {/* Language switcher */}
           <div className="hidden sm:flex items-center gap-1.5 text-[11px]">
-            {languages.map((lang, i) => (
-              <span key={lang} className="flex items-center gap-1.5">
+            {languages.map(({ code, label }, i) => (
+              <span key={code} className="flex items-center gap-1.5">
                 <button
-                  onClick={() => setActiveLang(lang)}
+                  onClick={() => setLang(code)}
                   className="transition-colors duration-200"
                   style={{
-                    color: activeLang === lang ? "#c9a84c" : "rgba(15,31,61,0.55)",
-                    fontWeight: activeLang === lang ? "600" : "400",
+                    color: activeLang === code ? "#c9a84c" : "rgba(15,31,61,0.5)",
+                    fontWeight: activeLang === code ? "600" : "400",
                     background: "none",
                     border: "none",
                     cursor: "pointer",
                     padding: 0,
                   }}
                 >
-                  {lang}
+                  {label}
                 </button>
                 {i < languages.length - 1 && (
                   <span className="text-[#0f1f3d]/20 select-none leading-none">|</span>
@@ -78,9 +83,9 @@ export default function Nav() {
           {/* Desktop CTA */}
           <Link
             href="/contact"
-            className="max-lg:hidden bg-[#0f1f3d] !text-white rounded-md px-5 py-2.5 text-sm font-semibold hover:bg-[#c9a84c] hover:!text-[#0f1f3d] transition-all duration-200"
+            className="max-lg:hidden whitespace-nowrap bg-[#0f1f3d] !text-white rounded-md px-5 py-2.5 text-sm font-semibold hover:bg-[#c9a84c] hover:!text-[#0f1f3d] transition-all duration-200"
           >
-            Let's Connect
+            {t("nav.cta_button")}
           </Link>
 
           {/* Hamburger */}
@@ -111,32 +116,32 @@ export default function Nav() {
         style={{ maxHeight: menuOpen ? "500px" : "0", opacity: menuOpen ? 1 : 0 }}
       >
         <div className="px-6 py-7 flex flex-col gap-5 border-t border-[#e5e7eb] bg-white">
-          {navLinks.map(({ label, href }) => (
+          {navLinks.map(({ key, href }) => (
             <Link
-              key={label}
+              key={key}
               href={href}
               onClick={() => setMenuOpen(false)}
               className="text-sm font-medium text-[#0f1f3d] hover:text-[#c9a84c] transition-colors duration-200"
             >
-              {label}
+              {t(key)}
             </Link>
           ))}
 
           <div className="flex items-center gap-2 pt-3 border-t border-[#e5e7eb] text-[11px]">
-            {languages.map((lang, i) => (
-              <span key={lang} className="flex items-center gap-2">
+            {languages.map(({ code, label }, i) => (
+              <span key={code} className="flex items-center gap-2">
                 <button
-                  onClick={() => setActiveLang(lang)}
+                  onClick={() => setLang(code)}
                   style={{
-                    color: activeLang === lang ? "#c9a84c" : "rgba(15,31,61,0.55)",
-                    fontWeight: activeLang === lang ? "600" : "400",
+                    color: activeLang === code ? "#c9a84c" : "rgba(15,31,61,0.5)",
+                    fontWeight: activeLang === code ? "600" : "400",
                     background: "none",
                     border: "none",
                     cursor: "pointer",
                     padding: 0,
                   }}
                 >
-                  {lang}
+                  {label}
                 </button>
                 {i < languages.length - 1 && (
                   <span className="text-[#0f1f3d]/20 select-none">|</span>
@@ -150,7 +155,7 @@ export default function Nav() {
             onClick={() => setMenuOpen(false)}
             className="bg-[#0f1f3d] !text-white rounded-md px-5 py-2.5 text-sm font-semibold text-center hover:bg-[#c9a84c] hover:!text-[#0f1f3d] transition-all duration-200"
           >
-            Let's Connect
+            {t("nav.cta_button")}
           </Link>
         </div>
       </div>

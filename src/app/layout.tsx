@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Khmer } from "next/font/google";
+import { cookies } from "next/headers";
 import "./globals.css";
+import { LANG_COOKIE, htmlLang, parseLang } from "@/lib/i18n-config";
 import Nav from "@/components/Nav";
+import Providers from "@/components/Providers";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const notoKhmer = Noto_Sans_Khmer({
+  subsets: ["khmer"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-khmer",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -34,17 +44,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = parseLang((await cookies()).get(LANG_COOKIE)?.value);
+
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang={htmlLang[lang]} className={`${inter.variable} ${notoKhmer.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-[#0f1f3d]">
-        <Nav />
-        {children}
-        <ScrollReveal />
+        <Providers initialLang={lang}>
+          <Nav />
+          {children}
+          <ScrollReveal />
+        </Providers>
       </body>
     </html>
   );
