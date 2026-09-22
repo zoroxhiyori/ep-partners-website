@@ -4,19 +4,19 @@ import Link from "next/link";
 import { labelTracking, useLanguage } from "@/lib/i18n";
 
 const serviceLinks = [
-  { label: "Business Registration", href: "/services" },
-  { label: "Tax Compliance", href: "/services" },
-  { label: "Accounting & Bookkeeping", href: "/services" },
-  { label: "Audit & Assurance", href: "/services" },
-  { label: "Financial Advisory", href: "/services" },
-  { label: "M&A & Due Diligence", href: "/services" },
+  { key: "svc.01.name", href: "/services" },
+  { key: "svc.02.name", href: "/services" },
+  { key: "svc.03.name", href: "/services" },
+  { key: "svc.04.name", href: "/services" },
+  { key: "footer.link.financial_advisory", href: "/services" },
+  { key: "svc.07.name", href: "/services" },
 ];
 
 const companyLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Technical Updates", href: "/updates" },
-  { label: "Careers", href: "/careers" },
+  { key: "footer.link.about", href: "/about" },
+  { key: "footer.link.solutions", href: "/solutions" },
+  { key: "footer.link.updates", href: "/updates" },
+  { key: "footer.link.careers", href: "/careers" },
 ];
 
 const contactItems = [
@@ -58,9 +58,9 @@ export default function Footer() {
               {t("footer.col_services")}
             </h4>
             <ul className="flex flex-col gap-2.5">
-              {serviceLinks.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href} className={linkClass}>{label}</Link>
+              {serviceLinks.map(({ key, href }) => (
+                <li key={key}>
+                  <Link href={href} className={linkClass}>{t(key)}</Link>
                 </li>
               ))}
             </ul>
@@ -72,9 +72,9 @@ export default function Footer() {
               {t("footer.col_company")}
             </h4>
             <ul className="flex flex-col gap-2.5">
-              {companyLinks.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href} className={linkClass}>{label}</Link>
+              {companyLinks.map(({ key, href }) => (
+                <li key={key}>
+                  <Link href={href} className={linkClass}>{t(key)}</Link>
                 </li>
               ))}
             </ul>
