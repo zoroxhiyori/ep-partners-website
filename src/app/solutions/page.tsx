@@ -304,16 +304,16 @@ export default function SolutionsPage() {
         <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
             <div className="flex flex-col gap-4 max-w-xl">
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c]">Let's Talk</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">Don't see your<br />industry listed?</h2>
+              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c9a84c]">Let&apos;s Talk</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">Don&apos;t see your<br />industry listed?</h2>
               <p className="text-base leading-relaxed text-white/65">
                 We work with businesses across all sectors in Cambodia. Tell us
-                about your situation and we'll tailor a solution that fits.
+                about your situation and we&apos;ll tailor a solution that fits.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link href="/contact" className="inline-block bg-[#c9a84c] text-[#0f1f3d] rounded-md px-6 py-3 text-sm font-semibold hover:bg-[#b8972a] transition-all duration-200 w-full sm:w-auto text-center">
-                Let's Connect
+                Let&apos;s Connect
               </Link>
               <div className="flex flex-col gap-1">
                 <Link href="/services" className="text-sm !text-white/45 hover:!text-[#c9a84c] transition-colors">
