@@ -3,12 +3,15 @@
 import Link from "next/link";
 import { useState } from "react";
 import { categoryMeta, type Category, type Language, type Update } from "@/lib/content-types";
+import { labelTracking, useLanguage } from "@/lib/i18n";
 
-const categories: ["All", ...Category[]] = [
-  "All",
-  "Tax & Accounting",
-  "Legal & Compliance",
-  "Business & Investment",
+// `value` is the English category from the markdown and is what the filter
+// matches on; only the button label is translated.
+const categories: { value: "All" | Category; key: string }[] = [
+  { value: "All", key: "updates.filter.all" },
+  { value: "Tax & Accounting", key: "updates.filter.tax" },
+  { value: "Legal & Compliance", key: "updates.filter.legal" },
+  { value: "Business & Investment", key: "updates.filter.business" },
 ];
 const languages: Language[] = ["EN", "KH", "CH"];
 
@@ -51,6 +54,7 @@ function openShare(href: string) {
 }
 
 export default function UpdatesContent({ updates }: { updates: Update[] }) {
+  const { lang: uiLang, t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<"All" | Category>("All");
   const [activeLang, setActiveLang] = useState<Language | "">();
 
@@ -62,23 +66,38 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
 
   return (
     <>
+      {/* ── HERO (navy) ── */}
+      <section className="bg-[#0f1f3d]">
+        <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24">
+          <p className={`text-xs font-bold uppercase ${labelTracking(uiLang, "tracking-widest")} text-[#c9a84c] mb-4`}>
+            {t("updates.hero.label")}
+          </p>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-5 max-w-3xl">
+            {t("updates.hero.heading")}
+          </h1>
+          <p className="text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
+            {t("updates.hero.desc")}
+          </p>
+        </div>
+      </section>
+
       {/* ── FILTER BAR (white) ── */}
       <section className="bg-white" style={{ borderBottom: "1px solid #e5e7eb" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-1.5 flex-wrap">
-            {categories.map((cat) => {
-              const active = activeCategory === cat;
+            {categories.map(({ value, key }) => {
+              const active = activeCategory === value;
               return (
                 <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  key={value}
+                  onClick={() => setActiveCategory(value)}
                   className="px-3.5 py-1.5 text-xs font-semibold rounded-md transition-all duration-200 relative"
                   style={{
                     color: active ? "#0f1f3d" : "#445571",
                     background: active ? "rgba(201,168,76,0.12)" : "transparent",
                   }}
                 >
-                  {cat}
+                  {t(key)}
                   {active && (
                     <span
                       className="absolute bottom-0 left-3.5 right-3.5 h-px block"
@@ -96,7 +115,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
               className="px-2.5 py-1 rounded transition-colors duration-150"
               style={{ color: !activeLang ? "#c9a84c" : "#445571", fontWeight: !activeLang ? 700 : 400 }}
             >
-              All
+              {t("updates.filter.all")}
             </button>
             {languages.map((lang) => (
               <span key={lang} className="flex items-center gap-1">
@@ -122,7 +141,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
         <div data-reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 sm:py-16 lg:py-20">
           {filtered.length === 0 ? (
             <p className="text-center text-[#445571] py-20">
-              No articles match the selected filters.
+              {t("updates.empty")}
             </p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -177,7 +196,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
                         href={`/updates/${update.slug}`}
                         className="text-sm font-semibold !text-[#c9a84c] hover:!text-[#0f1f3d] transition-colors duration-200"
                       >
-                        Read More →
+                        {t("updates.card.read_more")}
                       </Link>
 
                       <div className="flex items-center gap-2">
@@ -187,7 +206,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
                               `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl(update.slug))}`
                             )
                           }
-                          aria-label="Share on Facebook"
+                          aria-label={t("updates.share.facebook")}
                           className="text-[#445571]/40 hover:text-[#4267B2] transition-colors duration-150"
                         >
                           <FacebookIcon />
@@ -198,7 +217,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
                               `https://t.me/share/url?url=${encodeURIComponent(shareUrl(update.slug))}&text=${encodeURIComponent(update.title)}`
                             )
                           }
-                          aria-label="Share on Telegram"
+                          aria-label={t("updates.share.telegram")}
                           className="text-[#445571]/40 hover:text-[#26A5E4] transition-colors duration-150"
                         >
                           <TelegramIcon />
@@ -209,7 +228,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
                               `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl(update.slug))}`
                             )
                           }
-                          aria-label="Share on LinkedIn"
+                          aria-label={t("updates.share.linkedin")}
                           className="text-[#445571]/40 hover:text-[#0077B5] transition-colors duration-150"
                         >
                           <LinkedInIcon />
@@ -220,7 +239,7 @@ export default function UpdatesContent({ updates }: { updates: Update[] }) {
                               `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl(update.slug))}&text=${encodeURIComponent(update.title)}`
                             )
                           }
-                          aria-label="Share on X"
+                          aria-label={t("updates.share.x")}
                           className="text-[#445571]/40 hover:text-[#000000] transition-colors duration-150"
                         >
                           <TwitterIcon />

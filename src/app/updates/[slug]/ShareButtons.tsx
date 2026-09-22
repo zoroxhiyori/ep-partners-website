@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "@/lib/i18n";
 
 interface Props {
   title: string;
@@ -16,6 +17,7 @@ function getUrl() {
 }
 
 export default function ShareButtons({ title, size = "md" }: Props) {
+  const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
 
   const iconSize = size === "sm" ? 15 : 18;
@@ -41,7 +43,7 @@ export default function ShareButtons({ title, size = "md" }: Props) {
         onClick={() =>
           openShare(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl()}`)
         }
-        aria-label="Share on Facebook"
+        aria-label={t("updates.share.facebook")}
         className={`${btnClass} text-[#445571] hover:text-[#4267B2] hover:bg-[#4267B2]/10`}
       >
         <svg viewBox="0 0 24 24" fill="currentColor" width={iconSize} height={iconSize}>
@@ -56,7 +58,7 @@ export default function ShareButtons({ title, size = "md" }: Props) {
             `https://t.me/share/url?url=${encodedUrl()}&text=${encodedTitle}`
           )
         }
-        aria-label="Share on Telegram"
+        aria-label={t("updates.share.telegram")}
         className={`${btnClass} text-[#445571] hover:text-[#26A5E4] hover:bg-[#26A5E4]/10`}
       >
         <svg viewBox="0 0 24 24" fill="currentColor" width={iconSize} height={iconSize}>
@@ -71,7 +73,7 @@ export default function ShareButtons({ title, size = "md" }: Props) {
             `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl()}`
           )
         }
-        aria-label="Share on LinkedIn"
+        aria-label={t("updates.share.linkedin")}
         className={`${btnClass} text-[#445571] hover:text-[#0077B5] hover:bg-[#0077B5]/10`}
       >
         <svg viewBox="0 0 24 24" fill="currentColor" width={iconSize} height={iconSize}>
@@ -86,7 +88,7 @@ export default function ShareButtons({ title, size = "md" }: Props) {
             `https://twitter.com/intent/tweet?url=${encodedUrl()}&text=${encodedTitle}`
           )
         }
-        aria-label="Share on X"
+        aria-label={t("updates.share.x")}
         className={`${btnClass} text-[#445571] hover:text-[#000000] hover:bg-black/10`}
       >
         <svg viewBox="0 0 24 24" fill="currentColor" width={iconSize} height={iconSize}>
@@ -97,7 +99,7 @@ export default function ShareButtons({ title, size = "md" }: Props) {
       {/* Copy Link */}
       <button
         onClick={handleCopy}
-        aria-label="Copy link"
+        aria-label={t("updates.share.copy")}
         className={`${btnClass} transition-all duration-150 ${
           copied
             ? "text-[#059669] bg-[#ECFDF5]"
@@ -117,7 +119,7 @@ export default function ShareButtons({ title, size = "md" }: Props) {
       </button>
 
       {copied && (
-        <span className="text-xs font-medium text-[#059669] ml-1">Copied!</span>
+        <span className="text-xs font-medium text-[#059669] ml-1">{t("updates.share.copied")}</span>
       )}
     </div>
   );
